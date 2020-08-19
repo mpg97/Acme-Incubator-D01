@@ -17,4 +17,14 @@ administrator.tool.form.label.email = Email:
 
 anonymous.tool.label.openSource = ¿Es de codigo libre?
 
-administrator.tool.form.button.create = Creacion
+administrator.tool.form.button.return = Volver 
+administrator.tool.form.button.create = Crear
+administrator.tool.form.button.update = Actualizar
+administrator.tool.form.button.delete = Borrar
+
+administrator.tool.list.label.title = Titulo
+administrator.tool.list.label.sector = Sector
+administrator.tool.list.label.inventor = Inventor
+administrator.tool.list.label.description = Descripción
+administrator.tool.list.label.web = Web
+administrator.tool.list.label.email = Email

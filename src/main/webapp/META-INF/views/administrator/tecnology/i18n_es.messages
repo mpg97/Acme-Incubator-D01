@@ -17,4 +17,14 @@ administrator.tecnology.form.label.email = Email:
 
 anonymous.tecnology.label.openSource = ¿Es de codigo libre?
 
-administrator.tecnology.form.button.create = Creacion
+administrator.tecnology.form.button.return = Volver 
+administrator.tecnology.form.button.create = Crear
+administrator.tecnology.form.button.update = Actualizar
+administrator.tecnology.form.button.delete = Borrar
+
+administrator.tecnology.list.label.title = Titulo
+administrator.tecnology.list.label.sector = Sector
+administrator.tecnology.list.label.inventor = Inventor
+administrator.tecnology.list.label.description = Descripción
+administrator.tecnology.list.label.web = Web
+administrator.tecnology.list.label.email = Email

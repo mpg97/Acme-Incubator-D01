@@ -20,10 +20,20 @@
 	<acme:form-textbox code="administrator.tool.form.label.sector" path="sector" />
 	<acme:form-textbox code="administrator.tool.form.label.inventor" path="inventor"/>
 	<acme:form-textbox code="administrator.tool.form.label.description" path="description"/>
-	<acme:form-textbox code="administrator.tool.form.label.web" path="web"/>
+	<acme:form-url code="administrator.tool.form.label.web" path="web"/>
 	<acme:form-textbox code="administrator.tool.form.label.email" path="email"/>
 	
 	<acme:form-checkbox code="anonymous.tool.label.openSource" path="openSource"/>
 	
-	<acme:form-submit code="administrator.tool.form.button.create" action="/administrator/tool/create"/>
-</acme:form>
+	<acme:form-submit test="${command == 'show'}" code="administrator.tool.form.button.update"
+		action="/administrator/tool/update" />
+	<acme:form-submit test="${command == 'show'}" code="administrator.tool.form.button.delete"
+		action="/administrator/tool/delete" />
+	<acme:form-submit test="${command == 'create'}" code="administrator.tool.form.button.create"
+		action="/administrator/tool/create" />
+	<acme:form-submit test="${command == 'update'}" code="administrator.tool.form.button.update"
+		action="/administrator/tool/update" />
+	<acme:form-submit test="${command == 'delete'}" code="administrator.tool.form.button.delete"
+		action="/administrator/tool/delete " />
+
+	<acme:form-return code="administrator.tool.form.button.return" /></acme:form>

@@ -13,7 +13,7 @@ anonymous.tecnology.form.label.sector = Sector:
 anonymous.tecnology.form.label.description = Descripción:
 anonymous.tecnology.form.label.web = Web:
 anonymous.tecnology.form.label.email = Email:
-anonymous.tecnology.form.label.openSource = Código abierto:
+anonymous.tecnology.label.openSource = Código abierto:
 anonymous.tecnology.form.label.inventor = Inventor:
 anonymous.tecnology.form.button.return = Volver
 
@@ -22,5 +22,5 @@ anonymous.tecnology.list.label.sector = Sector:
 anonymous.tecnology.list.label.description = Descripción:
 anonymous.tecnology.list.label.web = Web:
 anonymous.tecnology.list.label.email = Email:
-anonymous.tecnology.list.label.openSource = Código abierto:
+anonymous.tecnology.label.openSource = Código abierto:
 anonymous.tecnology.list.label.inventor = Inventor:

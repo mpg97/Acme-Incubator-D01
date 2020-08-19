@@ -13,7 +13,7 @@ anonymous.tool.form.label.sector = Sector:
 anonymous.tool.form.label.description = Description:
 anonymous.tool.form.label.web = Web:
 anonymous.tool.form.label.email = Email:
-anonymous.tool.form.label.openSource = Open Source:
+anonymous.tool.label.openSource = Open Source:
 anonymous.tool.form.label.inventor = Inventor:
 anonymous.tool.form.button.return = Return
 

@@ -20,6 +20,6 @@
 	<acme:form-textbox code="authenticated.inquiry.form.label.paragraph" path="paragraph" />
 	<acme:form-textbox code="authenticated.inquiry.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="authenticated.inquiry.form.label.email" path="email"/>
-	<acme:form-textbox code="authenticated.inquiry.form.label.lowMoney" path="lowMoney"/>
-	<acme:form-textbox code="authenticated.inquiry.form.label.highMoney" path="highMoney"/>
+	<acme:form-money code="authenticated.inquiry.form.label.lowMoney" path="lowMoney"/>
+	<acme:form-money code="authenticated.inquiry.form.label.highMoney" path="highMoney"/>
 	<acme:form-return code="authenticated.inquiry.form.button.return"/>	</acme:form>

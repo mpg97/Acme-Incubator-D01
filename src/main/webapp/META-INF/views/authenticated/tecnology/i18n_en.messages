@@ -13,7 +13,7 @@ authenticated.tecnology.form.label.sector = Sector:
 authenticated.tecnology.form.label.description = Description:
 authenticated.tecnology.form.label.web = Web:
 authenticated.tecnology.form.label.email = Email:
-authenticated.tecnology.form.label.openSource = Open Source:
+authenticated.tecnology.label.openSource = Open Source:
 authenticated.tecnology.form.label.inventor = Inventor:
 authenticated.tecnology.form.button.return = Return
 

@@ -18,12 +18,8 @@
 
 <acme:list>
 	<acme:list-column code="administrator.notice.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="administrator.notice.list.label.body" path="body" width="40%"/>
 	<acme:list-column code="administrator.notice.list.label.creation" path="creation" width="40%"/>		
-	<acme:list-column code="administrator.notice.list.label.deadline" path="deadline" width="40%"/>		
-	<acme:list-column code="administrator.notice.list.label.header" path="header" width="40%"/>		
-
-
+	<acme:list-column code="administrator.notice.list.label.deadline" path="deadline" width="40%"/>			
 </acme:list>
 
 

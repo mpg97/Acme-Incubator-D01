@@ -17,12 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.tecnology.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.tecnology.list.label.sector" path="sector" width="40%"/>
-	<acme:list-column code="anonymous.tecnology.list.label.email" path="email" width="40%"/>		
-	<acme:list-column code="anonymous.tecnology.list.label.inventor" path="inventor" width="40%"/>		
-
-
+	<acme:list-column code="anonymous.tecnology.list.label.title" path="title"/>
+	<acme:list-column code="anonymous.tecnology.list.label.sector" path="sector"/>
+	<acme:list-column code="anonymous.tecnology.list.label.inventor" path="inventor"/>		
 </acme:list>
 
 

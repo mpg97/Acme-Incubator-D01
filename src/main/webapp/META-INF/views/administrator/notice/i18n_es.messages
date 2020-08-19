@@ -11,6 +11,24 @@
 administrator.notice.form.label.header = Cabecera:
 administrator.notice.form.label.title = Título:
 administrator.notice.form.label.body = Cuerpo:
-administrator.notice.form.label.links = Links:
+administrator.notice.form.label.links = Enlaces:
 administrator.notice.form.label.deadline = Fecha fin:
+
+administrator.notice.label.sure = Estás seguro de querer guardar esta noticia
+
+administrator.notice.list.label.header = Cabezera
+administrator.notice.list.label.title = Título
+administrator.notice.list.label.body = Cuerpo
+administrator.notice.list.label.links = Enlaces
+administrator.notice.list.label.deadline = Fecha fin
+administrator.notice.list.label.creation = Fecha creación
+
+administrator.notice.deadline.before = La deadline no puede ser posterior a hoy
+administrator.notice.link.valid = Hay algunos links erroneos
+administrator.notice.sure.must-accept = Tienes que aceptar el checkbox
+administrator.notice.links.text = Todos los enlaces han de estar separados por un ;
+
+administrator.notice.form.button.return = Volver 
 administrator.notice.form.button.create = Crear
+administrator.notice.form.button.update = Actualizar
+administrator.notice.form.button.delete = Borrar

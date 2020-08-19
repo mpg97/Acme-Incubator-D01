@@ -13,7 +13,7 @@ anonymous.tecnology.form.label.sector = Sector:
 anonymous.tecnology.form.label.description = Description:
 anonymous.tecnology.form.label.web = Web:
 anonymous.tecnology.form.label.email = Email:
-anonymous.tecnology.form.label.openSource = Open Source:
+anonymous.tecnology.label.openSource = Open Source:
 anonymous.tecnology.form.label.inventor = Inventor:
 anonymous.tecnology.form.button.return = Return
 

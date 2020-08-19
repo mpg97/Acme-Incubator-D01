@@ -18,9 +18,19 @@
 <acme:form>
 	<acme:form-textbox code="administrator.overture.form.label.title" path="title" />
 	<acme:form-textbox code="administrator.overture.form.label.paragraph" path="paragraph" />
-	<acme:form-textbox code="administrator.overture.form.label.deadline" path="deadline"/>
+	<acme:form-moment code="administrator.overture.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="administrator.overture.form.label.email" path="email"/>
-	<acme:form-textbox code="administrator.overture.form.label.lowMoney" path="lowMoney"/>
-	<acme:form-textbox code="administrator.overture.form.label.highMoney" path="highMoney"/>
-	<acme:form-submit code="administrator.overture.form.button.create" action="/administrator/inquiry/create"/>
-</acme:form>
+	<acme:form-money code="administrator.overture.form.label.lowMoney" path="lowMoney"/>
+	<acme:form-money code="administrator.overture.form.label.highMoney" path="highMoney"/>
+	<acme:form-submit test="${command == 'show'}" code="administrator.overture.form.button.update"
+		action="/administrator/overture/update" />
+	<acme:form-submit test="${command == 'show'}" code="administrator.overture.form.button.delete"
+		action="/administrator/overture/delete" />
+	<acme:form-submit test="${command == 'create'}" code="administrator.overture.form.button.create"
+		action="/administrator/overture/create" />
+	<acme:form-submit test="${command == 'update'}" code="administrator.overture.form.button.update"
+		action="/administrator/overture/update" />
+	<acme:form-submit test="${command == 'delete'}" code="administrator.overture.form.button.delete"
+		action="/administrator/overture/delete " />
+
+	<acme:form-return code="administrator.overture.form.button.return" /></acme:form>

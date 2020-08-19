@@ -10,17 +10,17 @@
 
 authenticated.inquiry.form.label.title = Título:
 authenticated.inquiry.form.label.sector = Sector:
-authenticated.inquiry.form.label.description = Descripción:
+authenticated.inquiry.form.label.paragraph = Párrafo:
 authenticated.inquiry.form.label.web = Web:
 authenticated.inquiry.form.label.email = Email:
 authenticated.inquiry.form.label.lowMoney = Menor Dinero:
 authenticated.inquiry.form.label.highMoney = Mayor Dinero:
 authenticated.inquiry.form.button.return = Volver
 
-authenticated.inquiry.list.label.title = Título:
-authenticated.inquiry.list.label.sector = Sector:
-authenticated.inquiry.list.label.description = Descripción:
-authenticated.inquiry.list.label.web = Web:
-authenticated.inquiry.list.label.email = Email:
-authenticated.inquiry.list.label.lowMoney = Menor Dinero:
-authenticated.inquiry.list.label.highMoney  = Mayor Dinero:
+authenticated.inquiry.list.label.title = Título
+authenticated.inquiry.list.label.sector = Sector
+authenticated.inquiry.list.label.paragraph = Párrafo
+authenticated.inquiry.list.label.web = Web
+authenticated.inquiry.list.label.email = Email
+authenticated.inquiry.list.label.lowMoney = Menor Dinero
+authenticated.inquiry.list.label.highMoney  = Mayor Dinero

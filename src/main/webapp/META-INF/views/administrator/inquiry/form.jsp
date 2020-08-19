@@ -18,9 +18,20 @@
 <acme:form>
 	<acme:form-textbox code="administrator.inquiry.form.label.title" path="title" />
 	<acme:form-textbox code="administrator.inquiry.form.label.paragraph" path="paragraph" />
-	<acme:form-textbox code="administrator.inquiry.form.label.deadline" path="deadline"/>
-	<acme:form-textbox code="administrator.inquiry.form.label.email" path="email"/>
-	<acme:form-textbox code="administrator.inquiry.form.label.lowMoney" path="lowMoney"/>
-	<acme:form-textbox code="administrator.inquiry.form.label.highMoney" path="highMoney"/>
-	<acme:form-submit code="administrator.inquiry.form.button.create" action="/administrator/inquiry/create"/>
+	<acme:form-moment code="administrator.inquiry.form.label.deadline" path="deadline" />
+	<acme:form-textbox code="administrator.inquiry.form.label.email" path="email" />
+	<acme:form-money code="administrator.inquiry.form.label.lowMoney" path="lowMoney" />
+	<acme:form-money code="administrator.inquiry.form.label.highMoney" path="highMoney" />
+	<acme:form-submit test="${command == 'show'}" code="administrator.inquiry.form.button.update"
+		action="/administrator/inquiry/update" />
+	<acme:form-submit test="${command == 'show'}" code="administrator.inquiry.form.button.delete"
+		action="/administrator/inquiry/delete" />
+	<acme:form-submit test="${command == 'create'}" code="administrator.inquiry.form.button.create"
+		action="/administrator/inquiry/create" />
+	<acme:form-submit test="${command == 'update'}" code="administrator.inquiry.form.button.update"
+		action="/administrator/inquiry/update" />
+	<acme:form-submit test="${command == 'delete'}" code="administrator.inquiry.form.button.delete"
+		action="/administrator/inquiry/delete " />
+
+	<acme:form-return code="administrator.inquiry.form.button.return" />
 </acme:form>

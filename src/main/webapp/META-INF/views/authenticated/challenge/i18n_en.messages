@@ -9,16 +9,24 @@
 # they accept any liabilities with respect to them.
 
 authenticated.challenge.form.label.title = Title:
-authenticated.challenge.form.label.description = Description:
-authenticated.challenge.form.label.creation = Creation:
 authenticated.challenge.form.label.deadline = Deadline:
-authenticated.challenge.form.label.goalReward = Goal/Reward:
+authenticated.challenge.form.label.description = Description:
+authenticated.challenge.form.label.rockieReward = Rockie Reward:
+authenticated.challenge.form.label.averageReward = Average Reward:
+authenticated.challenge.form.label.expertReward = Expert Reward:
+authenticated.challenge.form.label.rockieGoal = Rockie Goal:
+authenticated.challenge.form.label.averageGoal = Average Goal:
+authenticated.challenge.form.label.expertGoal = Expert Goal:
 
-authenticated.challenge.form.button.return = Return
+authenticated.challenge.form.button.return = Return 
 
-authenticated.challenge.list.label.title = Title:
-authenticated.challenge.list.label.description  = Description:
-authenticated.challenge.list.label.creation = Creation:
-authenticated.challenge.list.label.deadline = Deadline:
-authenticated.challenge.list.label.goalReward = Goal Reward:
+authenticated.challenge.list.label.title = Title
+authenticated.challenge.list.label.deadline = Deadline
+authenticated.challenge.list.label.description = Description
+authenticated.challenge.list.label.rockieReward = Rockie Reward
+authenticated.challenge.list.label.averageReward = Average Reward
+authenticated.challenge.list.label.expertReward = Expert Reward
+authenticated.challenge.list.label.rockieGoal = Rockie Goal
+authenticated.challenge.list.label.averageGoal = Average Goal
+authenticated.challenge.list.label.expertGoal = Expert Goal
 

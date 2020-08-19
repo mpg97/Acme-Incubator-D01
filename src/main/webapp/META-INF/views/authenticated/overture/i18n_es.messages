@@ -10,17 +10,17 @@
 
 authenticated.overture.form.label.title = Título:
 authenticated.overture.form.label.sector = Sector:
-authenticated.overture.form.label.description = Descripción:
+authenticated.overture.form.label.paragraph = Párrafo:
 authenticated.overture.form.label.web = Web:
 authenticated.overture.form.label.email = Email:
-authenticated.inquiry.form.label.lowMoney = Menor Dinero:
-authenticated.inquiry.form.label.highMoney = Mayor Dinero:
+authenticated.overture.form.label.lowMoney = Menor Dinero:
+authenticated.overture.form.label.highMoney = Mayor Dinero:
 authenticated.overture.form.button.return = Volver
 
-authenticated.overture.list.label.title = Título:
-authenticated.overture.list.label.sector = Sector:
-authenticated.overture.list.label.description = Descripción:
-authenticated.overture.list.label.web = Web:
-authenticated.overture.list.label.email = Email:
-authenticated.inquiry.list.label.lowMoney = Menor Dinero:
-authenticated.inquiry.list.label.highMoney  = Mayor Dinero:
+authenticated.overture.list.label.title = Título
+authenticated.overture.list.label.sector = Sector
+authenticated.overture.list.label.paragraph = Párrafo
+authenticated.overture.list.label.web = Web
+authenticated.overture.list.label.email = Email
+authenticated.overture.list.label.lowMoney = Menor Dinero
+authenticated.overture.list.label.highMoney  = Mayor Dinero

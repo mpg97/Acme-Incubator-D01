@@ -11,16 +11,16 @@
 authenticated.inquiry.form.label.title = Title:
 authenticated.inquiry.form.label.paragraph = Paragraph:
 authenticated.inquiry.form.label.creation = Creation:
-authenticated.inquiry.form.label.deadline = deadline:
+authenticated.inquiry.form.label.deadline = Deadline:
 authenticated.inquiry.form.label.email = Email:
 authenticated.inquiry.form.label.lowMoney = Low money:
 authenticated.inquiry.form.label.highMoney = High Money:
 authenticated.inquiry.form.button.return = Return
 
-authenticated.inquiry.list.label.title = Title:
-authenticated.inquiry.list.label.paragraph = Paragraph:
-authenticated.inquiry.list.label.creation = Creation:
-authenticated.inquiry.list.label.deadline = deadline:
-authenticated.inquiry.list.label.lowMoney = Low Money:
-authenticated.inquiry.list.label.highMoney  = High Money:
-authenticated.inquiry.list.label.email = Email:
+authenticated.inquiry.list.label.title = Title
+authenticated.inquiry.list.label.paragraph = Paragraph
+authenticated.inquiry.list.label.creation = Creation
+authenticated.inquiry.list.label.deadline = Deadline
+authenticated.inquiry.list.label.lowMoney = Low Money
+authenticated.inquiry.list.label.highMoney  = High Money
+authenticated.inquiry.list.label.email = Email

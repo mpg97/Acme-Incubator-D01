@@ -17,6 +17,15 @@ administrator.tecnology.form.label.email = Email:
 
 anonymous.tecnology.label.openSource = It's open source?
 
+administrator.tecnology.form.button.return = Return 
 administrator.tecnology.form.button.create = Create
+administrator.tecnology.form.button.update = Update
+administrator.tecnology.form.button.delete = Delete
 
+administrator.tecnology.list.label.title = Title
+administrator.tecnology.list.label.sector = Sector
+administrator.tecnology.list.label.inventor = Inventor
+administrator.tecnology.list.label.description = Description
+administrator.tecnology.list.label.web = Web
+administrator.tecnology.list.label.email = Email
 

@@ -17,10 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.notice.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.notice.list.label.paragraph" path="paragraph" width="40%"/>
-	<acme:list-column code="anonymous.notice.list.label.email" path="email" width="40%"/>		
-	<acme:list-column code="anonymous.notice.list.label.deadline" path="deadline" width="40%"/>		
+	<acme:list-column code="administrator.overture.list.label.title" path="title" width="20%"/>
+	<acme:list-column code="administrator.overture.list.label.lowMoney" path="lowMoney" width="40%"/>		
+	<acme:list-column code="administrator.overture.list.label.deadline" path="deadline" width="40%"/>		
 
 
 </acme:list>

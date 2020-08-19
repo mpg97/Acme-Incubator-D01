@@ -9,15 +9,23 @@
 # they accept any liabilities with respect to them.
 
 authenticated.challenge.form.label.title = Título:
-authenticated.challenge.form.label.description = Descripción:
-authenticated.challenge.form.label.creation = Creación:
 authenticated.challenge.form.label.deadline = Deadline:
-authenticated.challenge.form.label.goalReward = Reto/Premio:
+authenticated.challenge.form.label.description = Descripción:
+authenticated.challenge.form.label.rockieReward = Recompensa para principiantes:
+authenticated.challenge.form.label.averageReward = Recompensa para intermediantes:
+authenticated.challenge.form.label.expertReward = Recompensa para expertos:
+authenticated.challenge.form.label.rockieGoal = Objetivo para principiantes:
+authenticated.challenge.form.label.averageGoal = Objetivo para intermediantes:
+authenticated.challenge.form.label.expertGoal = Objetivo para expertos:
 
 authenticated.challenge.form.button.return = Volver
 
-authenticated.challenge.list.label.title = Título:
-authenticated.challenge.list.label.description  = Descripción:
-authenticated.challenge.list.label.creation = Creación:
-authenticated.challenge.list.label.deadline = Deadline:
-authenticated.challenge.list.label.goalReward = Reto/Premio:
+authenticated.challenge.list.label.title = Título
+authenticated.challenge.list.label.deadline = Deadline
+authenticated.challenge.list.label.description = Descripción
+authenticated.challenge.list.label.rockieReward = Recompensa para principiantes
+authenticated.challenge.list.label.averageReward = Recompensa para intermediantes
+authenticated.challenge.list.label.expertReward = Recompensa para expertos
+authenticated.challenge.list.label.rockieGoal = Objetivo para principiantes
+authenticated.challenge.list.label.averageGoal = Objetivo para intermediantes
+authenticated.challenge.list.label.expertGoal = Objetivo para expertos

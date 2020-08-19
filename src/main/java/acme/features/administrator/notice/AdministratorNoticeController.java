@@ -17,15 +17,19 @@ import acme.framework.entities.Administrator;
 public class AdministratorNoticeController extends AbstractController<Administrator, Notice> {
 
 	@Autowired(required = true)
-	private AdministratorNoticeListService	listService;
+	private AdministratorNoticeListService		listService;
 
 	@Autowired(required = true)
-	private AdministratorNoticeShowService	showService;
+	private AdministratorNoticeShowService		showService;
+
+	@Autowired(required = true)
+	private AdministratorNoticeCreateService	createService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 }

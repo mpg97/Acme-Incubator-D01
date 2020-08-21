@@ -20,6 +20,7 @@
 	<acme:form-textbox code="anonymous.notice.form.label.title" path="title" />
 	<acme:form-textbox code="anonymous.notice.form.label.body" path="body"/>
 	<acme:form-textbox code="anonymous.notice.form.label.links" path="link"/>
+	<acme:form-textbox code="anonymous.notice.form.label.creation" path="creation"/>
 	<acme:form-textbox code="anonymous.notice.form.label.deadline" path="deadline"/>
 	<acme:form-return code="anonymous.notice.form.button.return"/>
 </acme:form>

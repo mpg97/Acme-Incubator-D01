@@ -1,6 +1,8 @@
 
 package acme.features.anonymous.technology;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,13 +10,13 @@ import acme.entities.technology.Technology;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousTechnologyShowService implements AbstractShowService<Anonymous, Technology> {
+public class AnonymousTechnologyListByStarsService implements AbstractListService<Anonymous, Technology> {
 
 	@Autowired
-	private AnonymousTechnologyRepository repository;
+	AnonymousTechnologyRepository repository;
 
 
 	@Override
@@ -30,20 +32,18 @@ public class AnonymousTechnologyShowService implements AbstractShowService<Anony
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "investorName", "description", "web", "email", "openSource", "stars");
+		request.unbind(entity, model, "title", "investorName", "stars");
 		model.setAttribute("sectorName", entity.getSector().getSector());
 
 	}
 
 	@Override
-	public Technology findOne(final Request<Technology> request) {
+	public Collection<Technology> findMany(final Request<Technology> request) {
 		assert request != null;
 
-		Technology result;
-		int id;
+		Collection<Technology> result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findTecnologyById(id);
+		result = this.repository.findAllTecnologiesOrderedByStars();
 
 		return result;
 	}

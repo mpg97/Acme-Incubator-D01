@@ -52,7 +52,7 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.notice = Notice
-master.menu.authenticated.tecnology = Tecnology
+master.menu.authenticated.technology = Technology
 master.menu.authenticated.tool = Tool
 master.menu.authenticated.inquiry = Inquiry
 master.menu.authenticated.overture = Overture
@@ -105,5 +105,7 @@ master.license.text = \
 ###################
 
 master.menu.anonymous.notice = Notice
-master.menu.anonymous.tecnology = Tecnology
-master.menu.anonymous.tool = Tool
+master.menu.anonymous.technology = Technologies
+master.menu.anonymous.technology.orderedByStars = Technologies order by stars
+master.menu.anonymous.tool = Tools
+master.menu.anonymous.tool.orderedByStars = Tools order by stars

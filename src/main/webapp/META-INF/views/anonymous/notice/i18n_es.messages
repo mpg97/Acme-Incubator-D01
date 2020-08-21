@@ -10,16 +10,16 @@
 
 anonymous.notice.form.label.title = Título:
 anonymous.notice.form.label.body = Cuerpo:
-anonymous.notice.form.label.creation = Creacion:
-anonymous.notice.form.label.deadline = Deadline:
+anonymous.notice.form.label.creation = Fecha de creación:
+anonymous.notice.form.label.deadline = Fecha Límite:
 anonymous.notice.form.label.header = Cabecera:
 anonymous.notice.form.label.links = Enlaces:
 anonymous.notice.form.button.return = Volver
 
 anonymous.notice.list.label.title = Título
 anonymous.notice.list.label.body = Cuerpo
-anonymous.notice.list.label.creation = Creacion
-anonymous.notice.list.label.deadline = Deadline
+anonymous.notice.list.label.creation = Fecha de creación
+anonymous.notice.list.label.deadline = Fecha límite
 anonymous.notice.list.label.header = Cabecera
 anonymous.notice.list.label.links = Enlaces
 

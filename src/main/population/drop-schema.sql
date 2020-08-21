@@ -27,9 +27,21 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
+    alter table `record` 
+       drop 
+       foreign key `FK5m3d06dehg19dco3s011wvwjo`;
+
     alter table `rookie_target` 
        drop 
        foreign key `FKg1tmyplqd3nd7swj38ynfp4gv`;
+
+    alter table `technology` 
+       drop 
+       foreign key FK_g9x1pskolrbtgfufi3u6ooin8;
+
+    alter table `tool` 
+       drop 
+       foreign key FK_6u4iuvl4m0o1avirqg4jwv7ov;
 
     drop table if exists `administrator`;
 
@@ -62,6 +74,8 @@
     drop table if exists `record`;
 
     drop table if exists `rookie_target`;
+
+    drop table if exists `sector`;
 
     drop table if exists `target_reward`;
 

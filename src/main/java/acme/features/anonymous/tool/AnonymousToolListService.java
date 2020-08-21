@@ -32,7 +32,8 @@ public class AnonymousToolListService implements AbstractListService<Anonymous, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "sector", "inventor", "description", "web", "email", "openSource");
+		request.unbind(entity, model, "title", "investorName", "stars");
+		model.setAttribute("sectorName", entity.getSector().getSector());
 
 	}
 	@Override

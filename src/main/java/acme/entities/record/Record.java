@@ -3,6 +3,8 @@ package acme.entities.record;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -10,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.sector.Sector;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,10 +27,6 @@ public class Record extends DomainEntity {
 	@NotBlank
 	@Column(length = 50)
 	private String				title;
-
-	@NotBlank
-	@Column(length = 50)
-	private String				sector;
 
 	@NotBlank
 	@Column(length = 50)
@@ -50,5 +49,12 @@ public class Record extends DomainEntity {
 
 	@Range(min = 0, max = 5)
 	private Double				stars;
+
+	//
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Sector				sector;
 
 }

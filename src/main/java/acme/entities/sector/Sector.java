@@ -1,7 +1,24 @@
 
 package acme.entities.sector;
 
-public enum Sector {
-	TECHNOLOGY, SCIENCE, ARTS, BUSINESS, HEALTH
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
+
+import acme.framework.entities.DomainEntity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+public class Sector extends DomainEntity {
+
+	private static final long	serialVersionUID	= 1L;
+
+	@NotBlank
+	@Column(length = 50)
+	//	@Pattern(regexp = "^(Technology|Science|Arts|Business|Health)$")
+	private String				sector;
 
 }

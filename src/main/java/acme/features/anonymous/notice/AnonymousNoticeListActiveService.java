@@ -1,10 +1,8 @@
 
 package acme.features.anonymous.notice;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +14,7 @@ import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousNoticeListService implements AbstractListService<Anonymous, Notice> {
+public class AnonymousNoticeListActiveService implements AbstractListService<Anonymous, Notice> {
 
 	@Autowired
 	AnonymousNoticeRepository repository;
@@ -35,7 +33,7 @@ public class AnonymousNoticeListService implements AbstractListService<Anonymous
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "body", "creation", "deadline", "header", "link");
+		request.unbind(entity, model, "title", "creation", "deadline");
 
 	}
 
@@ -45,22 +43,9 @@ public class AnonymousNoticeListService implements AbstractListService<Anonymous
 
 		Collection<Notice> result;
 
-		result = this.repository.findAllNotices();
+		result = this.repository.findAllActivesNotices(new Date(System.currentTimeMillis() - 1));
 
-		List<Notice> active = new ArrayList<>();
-		Date moment = new Date(System.currentTimeMillis() - 1);
-
-		for (Notice n : result) {
-
-			if (n.getDeadline().after(moment)) {
-
-				active.add(n);
-
-			}
-
-		}
-
-		return active;
+		return result;
 	}
 
 }

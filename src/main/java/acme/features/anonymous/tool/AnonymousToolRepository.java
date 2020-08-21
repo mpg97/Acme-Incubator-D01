@@ -15,4 +15,7 @@ public interface AnonymousToolRepository extends AbstractRepository {
 
 	@Query("select t from Tool t where t.id = ?1")
 	Tool findToolById(int id);
+
+	@Query("SELECT t FROM Tool t ORDER BY t.stars desc")
+	Collection<Tool> findAllToolsOrderedByStars();
 }

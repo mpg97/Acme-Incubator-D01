@@ -1,6 +1,8 @@
 
 package acme.features.anonymous.tool;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,13 +10,13 @@ import acme.entities.tool.Tool;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousToolShowService implements AbstractShowService<Anonymous, Tool> {
+public class AnonymousToolListByStarsService implements AbstractListService<Anonymous, Tool> {
 
 	@Autowired
-	private AnonymousToolRepository repository;
+	AnonymousToolRepository repository;
 
 
 	@Override
@@ -30,20 +32,17 @@ public class AnonymousToolShowService implements AbstractShowService<Anonymous, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "investorName", "description", "web", "email", "openSource", "stars");
+		request.unbind(entity, model, "title", "investorName", "stars");
 		model.setAttribute("sectorName", entity.getSector().getSector());
 
 	}
-
 	@Override
-	public Tool findOne(final Request<Tool> request) {
+	public Collection<Tool> findMany(final Request<Tool> request) {
 		assert request != null;
 
-		Tool result;
-		int id;
+		Collection<Tool> result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findToolById(id);
+		result = this.repository.findAllToolsOrderedByStars();
 
 		return result;
 	}

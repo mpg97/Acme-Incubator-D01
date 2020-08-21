@@ -149,10 +149,10 @@
         `email` varchar(255),
         `investor_name` varchar(50),
         `open_source` bit,
-        `sector` varchar(50),
         `stars` double precision,
         `title` varchar(50),
         `web` varchar(255),
+        `sector_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -163,6 +163,13 @@
         `reward_amount` double precision,
         `reward_currency` varchar(255),
         `challenge_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sector` (
+       `id` integer not null,
+        `version` integer not null,
+        `sector` varchar(50),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -182,10 +189,10 @@
         `email` varchar(255),
         `investor_name` varchar(50),
         `open_source` bit,
-        `sector` varchar(50),
         `stars` double precision,
         `title` varchar(50),
         `web` varchar(255),
+        `sector_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -196,10 +203,10 @@
         `email` varchar(255),
         `investor_name` varchar(50),
         `open_source` bit,
-        `sector` varchar(50),
         `stars` double precision,
         `title` varchar(50),
         `web` varchar(255),
+        `sector_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -259,7 +266,22 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `record` 
+       add constraint `FK5m3d06dehg19dco3s011wvwjo` 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);
+
     alter table `rookie_target` 
        add constraint `FKg1tmyplqd3nd7swj38ynfp4gv` 
        foreign key (`challenge_id`) 
        references `challenge` (`id`);
+
+    alter table `technology` 
+       add constraint FK_g9x1pskolrbtgfufi3u6ooin8 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);
+
+    alter table `tool` 
+       add constraint FK_6u4iuvl4m0o1avirqg4jwv7ov 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);

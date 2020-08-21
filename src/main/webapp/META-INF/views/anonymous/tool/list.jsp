@@ -18,8 +18,9 @@
 
 <acme:list>
 	<acme:list-column code="anonymous.tool.list.label.title" path="title"/>
-	<acme:list-column code="anonymous.tool.list.label.sector" path="sector"/>
-	<acme:list-column code="anonymous.tool.list.label.inventor" path="inventor"/>	
+	<acme:list-column code="anonymous.tool.list.label.sector" path="sectorName"/>
+	<acme:list-column code="anonymous.tool.list.label.investorName" path="investorName"/>		
+	<acme:list-column code="anonymous.tool.list.label.stars" path="stars"/>	
 </acme:list>
 
 

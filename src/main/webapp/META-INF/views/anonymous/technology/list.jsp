@@ -17,9 +17,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.tecnology.list.label.title" path="title"/>
-	<acme:list-column code="anonymous.tecnology.list.label.sector" path="sector"/>
-	<acme:list-column code="anonymous.tecnology.list.label.inventor" path="inventor"/>		
+	<acme:list-column code="anonymous.technology.list.label.title" path="title"/>
+	<acme:list-column code="anonymous.technology.list.label.sector" path="sectorName"/>
+	<acme:list-column code="anonymous.technology.list.label.investorName" path="investorName"/>		
+	<acme:list-column code="anonymous.technology.list.label.stars" path="stars"/>		
 </acme:list>
 
 

@@ -20,9 +20,11 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/" />
-			<acme:menu-suboption code="master.menu.anonymous.notice" action="/anonymous/notice/list" />
-			<acme:menu-suboption code="master.menu.anonymous.tecnology" action="/anonymous/tecnology/list" />
+			<acme:menu-suboption code="master.menu.anonymous.notice" action="/anonymous/notice/list-active" />
+			<acme:menu-suboption code="master.menu.anonymous.technology" action="/anonymous/technology/list" />
+			<acme:menu-suboption code="master.menu.anonymous.technology.orderedByStars" action="/anonymous/technology/list-by-stars" />
 			<acme:menu-suboption code="master.menu.anonymous.tool" action="/anonymous/tool/list" />
+			<acme:menu-suboption code="master.menu.anonymous.tool.orderedByStars" action="/anonymous/tool/list-by-stars" />
 
 		</acme:menu-option>
 

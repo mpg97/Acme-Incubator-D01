@@ -15,4 +15,7 @@ public interface AnonymousTechnologyRepository extends AbstractRepository {
 
 	@Query("select t from Technology t where t.id = ?1")
 	Technology findTecnologyById(int id);
+
+	@Query("SELECT t FROM Technology t ORDER BY t.stars desc")
+	Collection<Technology> findAllTecnologiesOrderedByStars();
 }

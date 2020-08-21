@@ -16,12 +16,13 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="anonymous.tecnology.form.label.title" path="title" />
-	<acme:form-textbox code="anonymous.tecnology.form.label.sector" path="sector" />
-	<acme:form-textbox code="anonymous.tecnology.form.label.description" path="description"/>
-	<acme:form-textbox code="anonymous.tecnology.form.label.web" path="web"/>
-	<acme:form-textbox code="anonymous.tecnology.form.label.email" path="email"/>
-	
-	<acme:form-checkbox code="anonymous.tecnology.label.openSource" path="openSource"/>
+	<acme:form-textbox code="anonymous.technology.form.label.title" path="title" />
+	<acme:form-textbox code="anonymous.technology.form.label.sector" path="sectorName" />
+	<acme:form-textbox code="anonymous.technology.form.label.investorName" path="investorName"/>
+	<acme:form-textarea code="anonymous.technology.form.label.description" path="description"/>
+	<acme:form-textbox code="anonymous.technology.form.label.web" path="web"/>
+	<acme:form-textbox code="anonymous.technology.form.label.email" path="email"/>
+	<acme:form-checkbox code="anonymous.technology.label.openSource" path="openSource"/>
+	<acme:form-textbox code="anonymous.technology.form.label.stars" path="stars"/>
 	<acme:form-return code="anonymous.notice.form.button.return"/>	
 	</acme:form>

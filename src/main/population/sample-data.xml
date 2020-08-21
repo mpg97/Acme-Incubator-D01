@@ -20,80 +20,130 @@
 	<bean id="notice01" class="acme.entities.notice.Notice">
 	
 		<property name="title" value="My first notice"/>
-		<property name="body" value="I want a description"/>
 		<property name="creation" value="2020/6/13 15:56"/>
 		<property name="deadline" value="2021/6/13 15:56"/>
 		<property name="header" value="https://imgur.com/gallery/A65dMbl"/>
+		<property name="body" value="I want a description"/>
+		<property name="link" value="https://www.google.com/"/>
 	
 	</bean>
 	
-	<bean id="debate01" class="acme.entities.debate.Debate">
+	<bean id="notice02" class="acme.entities.notice.Notice">
 	
-		<property name="title" value="My first notice"/>
-		<property name="paragraph" value="I want a description"/>
+		<property name="title" value="My second notice"/>
 		<property name="creation" value="2020/6/13 15:56"/>
 		<property name="deadline" value="2021/6/13 15:56"/>
+		<property name="header" value="https://imgur.com/gallery/A65dMbl"/>
+		<property name="body" value="I want a description"/>
+	</bean>
+	
+	<bean id="inquiry01" class="acme.entities.inquiry.Inquiry">
+	
+		<property name="title" value="My first inquiry"/>
+		<property name="creation" value="2019/5/30 15:56"/>
+		<property name="deadline" value="2021/2/22 19:50"/>
+		<property name="paragraph" value="I want a description"/>
+		<property name="minMoney">
+			<ref bean="Money01" />
+		</property>
+		<property name="maxMoney">
+			<ref bean="Money01" />
+		</property>
 		<property name="email" value="abc@us.es"/>
-		<property name="lowMoney" value="10"/>
-		<property name="highMoney" value="20"/>
+	
+	</bean>
+	
+	<bean id="overture01" class="acme.entities.overture.Overture">
+	
+		<property name="title" value="My first overture"/>
+		<property name="creation" value="2019/9/17 18:26"/>
+		<property name="deadline" value="2021/4/15 11:10"/>
+		<property name="paragraph" value="I want a description"/>
+		<property name="minMoney">
+			<ref bean="Money01" />
+		</property>
+		<property name="maxMoney">
+			<ref bean="Money01" />
+		</property>
+		<property name="email" value="times@news.com"/>
 	
 	</bean>
 	
 	
 	<bean id="challenge01" class="acme.entities.challenge.Challenge">
 	
-		<property name="title" value="My first notice"/>
+		<property name="title" value="My first challenge"/>
 		<property name="deadline" value="2021/6/13 15:56"/>
-		<property name="goalReward" value="Beauty/Kiss"/>
 		<property name="description" value="My first description"/>
 
 	</bean>
 	
-		<bean id="inquiry01" class="acme.entities.inquiry.Inquiry">
-	
-		<property name="title" value="My first notice"/>
-		<property name="paragraph" value="I want a description"/>
-		<property name="creation" value="2020/6/13 15:56"/>
-		<property name="deadline" value="2021/6/13 15:56"/>
-		<property name="email" value="abc@us.es"/>
-		<property name="lowMoney" value="10"/>
-		<property name="highMoney" value="20"/>
-	
+	<bean id="rookieTarget01" class="acme.entities.targets.RookieTarget">
+		<property name="goal" value="get 100 readers"/>
+		<property name="reward">
+			<ref bean="Money01" />
+		</property>
+		<property name="challenge">
+			<ref bean="challenge01"/>
+		</property>
 	</bean>
 	
-		<bean id="tecnology01" class="acme.entities.tecnology.Tecnology">
+	<bean id="averageTarget01" class="acme.entities.targets.AverageTarget">
+		<property name="goal" value="get 500 readers"/>
+		<property name="reward">
+			<ref bean="Money02" />
+		</property>
+		<property name="challenge">
+			<ref bean="challenge01"/>
+		</property>
+	</bean>
 	
-		<property name="title" value="My first notice"/>
-		<property name="sector" value="Naval"/>
+	<bean id="expertTarget01" class="acme.entities.targets.ExpertTarget">
+		<property name="goal" value="get 1000 readers"/>
+		<property name="reward">
+			<ref bean="Money03"/>
+		</property>
+		<property name="challenge">
+			<ref bean="challenge01"/>
+		</property>
+	</bean>
+	
+		<bean id="Money01" class="acme.framework.datatypes.Money">
+		<property name="amount" value="850.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="Money02" class="acme.framework.datatypes.Money">
+		<property name="amount" value="1300.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="Money03" class="acme.framework.datatypes.Money">
+		<property name="amount" value="2100.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="technology01" class="acme.entities.technology.Technology">
+	
+		<property name="title" value="My first technology"/>
+		<property name="sector" value="Technology"/>
+		<property name="investorName" value="Vivek Ravisankar"/>
 		<property name="description" value="I want a description"/>
-		<property name="web" value="hola.com"/>
-		<property name="email" value="abc@us.es"/>
-		<property name="openSource" value="1"/>
-	
+		<property name="web" value="https://www.hackerrank.com/"/>
+		<property name="email" value="support@hackerrank.com"/>
+		<property name="openSource" value="1"/>	
 	</bean>
 	
-			<bean id="tool01" class="acme.entities.tool.Tool">
+	<bean id="tool01" class="acme.entities.tool.Tool">
 	
-		<property name="title" value="My first notice"/>
-		<property name="sector" value="Naval"/>
+		<property name="title" value="My first tool"/>
+		<property name="sector" value="Technology"/>
+		<property name="investorName" value="Gereon Frahling"/>
 		<property name="description" value="I want a description"/>
-		<property name="web" value="hola.com"/>
-		<property name="email" value="abc@us.es"/>
+		<property name="web" value="https://www.deepl.com/"/>
+		<property name="email" value="info@deepl.com"/>
 		<property name="openSource" value="1"/>
-	
-	</bean>
-	
-	
-	<bean id="overture01" class="acme.entities.overture.Overture">
-	
-		<property name="title" value="My first notice"/>
-		<property name="paragraph" value="I want a description"/>
-		<property name="creation" value="2020/6/13 15:56"/>
-		<property name="deadline" value="2021/6/13 15:56"/>
-		<property name="email" value="abc@us.es"/>
-		<property name="lowMoney" value="10"/>
-		<property name="highMoney" value="20"/>
-	
+		<property name="stars" value="5.0"/>	
 	</bean>
 
 </beans>

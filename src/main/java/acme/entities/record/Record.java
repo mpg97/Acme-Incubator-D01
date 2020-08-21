@@ -5,7 +5,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
@@ -16,10 +18,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Record extends DomainEntity {
-
-	/**
-	 *
-	 */
 
 	private static final long	serialVersionUID	= 1L;
 
@@ -33,7 +31,7 @@ public class Record extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 50)
-	private String				inventor;
+	private String				investorName;
 
 	@NotBlank
 	@Column(length = 1024)
@@ -47,6 +45,10 @@ public class Record extends DomainEntity {
 	@Email
 	private String				email;
 
+	@NotNull
 	private Boolean				openSource;
+
+	@Range(min = 0, max = 5)
+	private Double				stars;
 
 }

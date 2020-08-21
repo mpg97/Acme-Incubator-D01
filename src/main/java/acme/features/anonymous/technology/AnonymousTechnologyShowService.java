@@ -1,31 +1,31 @@
 
-package acme.features.anonymous.tecnology;
+package acme.features.anonymous.technology;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tecnology.Tecnology;
+import acme.entities.technology.Technology;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnonymousTecnologyShowService implements AbstractShowService<Anonymous, Tecnology> {
+public class AnonymousTechnologyShowService implements AbstractShowService<Anonymous, Technology> {
 
 	@Autowired
-	private AnonymousTecnologyRepository repository;
+	private AnonymousTechnologyRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Tecnology> request) {
+	public boolean authorise(final Request<Technology> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Tecnology> request, final Tecnology entity, final Model model) {
+	public void unbind(final Request<Technology> request, final Technology entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -35,10 +35,10 @@ public class AnonymousTecnologyShowService implements AbstractShowService<Anonym
 	}
 
 	@Override
-	public Tecnology findOne(final Request<Tecnology> request) {
+	public Technology findOne(final Request<Technology> request) {
 		assert request != null;
 
-		Tecnology result;
+		Technology result;
 		int id;
 
 		id = request.getModel().getInteger("id");

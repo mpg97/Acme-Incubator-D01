@@ -1,5 +1,5 @@
 
-package acme.entities.tecnology;
+package acme.entities.technology;
 
 import javax.persistence.Entity;
 
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Tecnology extends Record {
+public class Technology extends Record {
 
 	private static final long serialVersionUID = 1L;
 

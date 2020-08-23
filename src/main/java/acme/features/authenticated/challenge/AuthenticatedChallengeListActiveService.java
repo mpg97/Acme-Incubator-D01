@@ -2,6 +2,7 @@
 package acme.features.authenticated.challenge;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedChallengeListService implements AbstractListService<Authenticated, Challenge> {
+public class AuthenticatedChallengeListActiveService implements AbstractListService<Authenticated, Challenge> {
 
 	@Autowired
 	AuthenticatedChallengeRepository repository;
@@ -32,18 +33,15 @@ public class AuthenticatedChallengeListService implements AbstractListService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "rockieGoal", "averageGoal", "expertGoal", "rockieReward", "averageReward", "expertReward");
+		request.unbind(entity, model, "title", "deadline", "description");
 
 	}
 	@Override
 	public Collection<Challenge> findMany(final Request<Challenge> request) {
 		assert request != null;
 
-		Collection<Challenge> result;
+		return this.repository.findAllActivesChallenges(new Date(System.currentTimeMillis() - 1));
 
-		result = this.repository.findAllChallenge();
-
-		return result;
 	}
 
 }

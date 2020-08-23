@@ -20,17 +20,22 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/" />
-			<acme:menu-suboption code="master.menu.anonymous.notice" action="/anonymous/notice/list-active" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.notice.actives" action="/anonymous/notice/list-active" />
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.technology" action="/anonymous/technology/list" />
 			<acme:menu-suboption code="master.menu.anonymous.technology.orderedByStars" action="/anonymous/technology/list-by-stars" />
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.tool" action="/anonymous/tool/list" />
 			<acme:menu-suboption code="master.menu.anonymous.tool.orderedByStars" action="/anonymous/tool/list-by-stars" />
 
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
 			<acme:menu-suboption code="master.menu.administrator.notice" action="/administrator/notice/list" />	
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
+			<acme:menu-suboption code="master.menu.administrator.configuration" action="/administrator/configuration/show"/>
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
@@ -44,12 +49,19 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.notice" action="/authenticated/notice/list" />
-			<acme:menu-suboption code="master.menu.authenticated.tecnology" action="/authenticated/tecnology/list" />
+			<acme:menu-suboption code="master.menu.authenticated.notice.actives" action="/authenticated/notice/list-active" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.technology" action="/authenticated/technology/list" />
+			<acme:menu-suboption code="master.menu.authenticated.technology.orderedByStars" action="/authenticated/technology/list-by-stars" />
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.tool" action="/authenticated/tool/list" />
-			<acme:menu-suboption code="master.menu.authenticated.inquiry" action="/authenticated/inquiry/list" />
-			<acme:menu-suboption code="master.menu.authenticated.overture" action="/authenticated/overture/list" />
-			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list" />
+			<acme:menu-suboption code="master.menu.authenticated.tool.orderedByStars" action="/authenticated/tool/list-by-stars" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.inquiry.actives" action="/authenticated/inquiry/list-active" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.overture.actives" action="/authenticated/overture/list-active" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.challenge.actives" action="/authenticated/challenge/list-active" />
 </acme:menu-option>
 
 	</acme:menu-left>

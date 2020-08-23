@@ -37,6 +37,14 @@
 		<property name="body" value="I want a description"/>
 	</bean>
 	
+	<bean id="notice03" class="acme.entities.notice.Notice">
+		<property name="title" value="My third notice"/>
+		<property name="creation" value="2019/6/13 15:56"/>
+		<property name="deadline" value="2020/6/13 15:56"/>
+		<property name="header" value="https://imgur.com/gallery/A65dMbl"/>
+		<property name="body" value="I want a description"/>
+	</bean>
+	
 	<bean id="inquiry01" class="acme.entities.inquiry.Inquiry">
 	
 		<property name="title" value="My first inquiry"/>
@@ -75,6 +83,32 @@
 		<property name="title" value="My first challenge"/>
 		<property name="deadline" value="2021/6/13 15:56"/>
 		<property name="description" value="My first description"/>
+		<property name="rookie">
+			<ref bean="rookieTarget01"/>
+		</property>
+		<property name="average">
+			<ref bean="averageTarget01"/>
+		</property>
+		<property name="expert">
+			<ref bean="expertTarget01"/>
+		</property>
+
+	</bean>
+	
+	<bean id="challenge02" class="acme.entities.challenge.Challenge">
+	
+		<property name="title" value="My Second challenge"/>
+		<property name="deadline" value="2020/5/30 15:56"/>
+		<property name="description" value="My second description"/>
+		<property name="rookie">
+			<ref bean="rookieTarget02"/>
+		</property>
+		<property name="average">
+			<ref bean="averageTarget02"/>
+		</property>
+		<property name="expert">
+			<ref bean="expertTarget02"/>
+		</property>
 
 	</bean>
 	
@@ -83,8 +117,12 @@
 		<property name="reward">
 			<ref bean="Money01" />
 		</property>
-		<property name="challenge">
-			<ref bean="challenge01"/>
+	</bean>
+	
+	<bean id="rookieTarget02" class="acme.entities.targets.RookieTarget">
+		<property name="goal" value="sell 100 units"/>
+		<property name="reward">
+			<ref bean="Money01" />
 		</property>
 	</bean>
 	
@@ -93,8 +131,12 @@
 		<property name="reward">
 			<ref bean="Money02" />
 		</property>
-		<property name="challenge">
-			<ref bean="challenge01"/>
+	</bean>
+	
+	<bean id="averageTarget02" class="acme.entities.targets.AverageTarget">
+		<property name="goal" value="sell 500 units"/>
+		<property name="reward">
+			<ref bean="Money02" />
 		</property>
 	</bean>
 	
@@ -103,8 +145,12 @@
 		<property name="reward">
 			<ref bean="Money03"/>
 		</property>
-		<property name="challenge">
-			<ref bean="challenge01"/>
+	</bean>
+	
+	<bean id="expertTarget02" class="acme.entities.targets.ExpertTarget">
+		<property name="goal" value="sell 500 units"/>
+		<property name="reward">
+			<ref bean="Money03"/>
 		</property>
 	</bean>
 	

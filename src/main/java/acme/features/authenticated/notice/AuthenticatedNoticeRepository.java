@@ -2,6 +2,7 @@
 package acme.features.authenticated.notice;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 
@@ -15,4 +16,7 @@ public interface AuthenticatedNoticeRepository extends AbstractRepository {
 
 	@Query("select n from Notice n where n.id = ?1")
 	Notice findNoticeById(int id);
+
+	@Query("SELECT n FROM Notice n WHERE n.deadline > ?1")
+	Collection<Notice> findAllActivesNotices(Date d);
 }

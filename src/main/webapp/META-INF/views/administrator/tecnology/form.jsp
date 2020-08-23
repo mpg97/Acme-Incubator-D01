@@ -16,25 +16,25 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="administrator.tecnology.form.label.title" path="title" />
-	<acme:form-textbox code="administrator.tecnology.form.label.sector" path="sector" />
-	<acme:form-textbox code="administrator.tecnology.form.label.inventor" path="inventor"/>
-	<acme:form-textbox code="administrator.tecnology.form.label.description" path="description"/>
-	<acme:form-url code="administrator.tecnology.form.label.web" path="web"/>
-	<acme:form-textbox code="administrator.tecnology.form.label.email" path="email"/>
+	<acme:form-textbox code="administrator.technology.form.label.title" path="title" />
+	<acme:form-textbox code="administrator.technology.form.label.sector" path="sector" />
+	<acme:form-textbox code="administrator.technology.form.label.inventor" path="inventor"/>
+	<acme:form-textbox code="administrator.technology.form.label.description" path="description"/>
+	<acme:form-url code="administrator.technology.form.label.web" path="web"/>
+	<acme:form-textbox code="administrator.technology.form.label.email" path="email"/>
 	
-	<acme:form-checkbox code="anonymous.tecnology.label.openSource" path="openSource"/>
+	<acme:form-checkbox code="anonymous.technology.label.openSource" path="openSource"/>
 	
-	<acme:form-submit test="${command == 'show'}" code="administrator.tecnology.form.button.update"
-		action="/administrator/tecnology/update" />
-	<acme:form-submit test="${command == 'show'}" code="administrator.tecnology.form.button.delete"
-		action="/administrator/tecnology/delete" />
-	<acme:form-submit test="${command == 'create'}" code="administrator.tecnology.form.button.create"
-		action="/administrator/tecnology/create" />
-	<acme:form-submit test="${command == 'update'}" code="administrator.tecnology.form.button.update"
-		action="/administrator/tecnology/update" />
-	<acme:form-submit test="${command == 'delete'}" code="administrator.tecnology.form.button.delete"
-		action="/administrator/tecnology/delete " />
+	<acme:form-submit test="${command == 'show'}" code="administrator.technology.form.button.update"
+		action="/administrator/technology/update" />
+	<acme:form-submit test="${command == 'show'}" code="administrator.technology.form.button.delete"
+		action="/administrator/technology/delete" />
+	<acme:form-submit test="${command == 'create'}" code="administrator.technology.form.button.create"
+		action="/administrator/technology/create" />
+	<acme:form-submit test="${command == 'update'}" code="administrator.technology.form.button.update"
+		action="/administrator/technology/update" />
+	<acme:form-submit test="${command == 'delete'}" code="administrator.technology.form.button.delete"
+		action="/administrator/technology/delete " />
 
-	<acme:form-return code="administrator.tecnology.form.button.return" />
+	<acme:form-return code="administrator.technology.form.button.return" />
 </acme:form>

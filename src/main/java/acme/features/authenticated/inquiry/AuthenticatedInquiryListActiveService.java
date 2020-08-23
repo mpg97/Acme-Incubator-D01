@@ -2,6 +2,7 @@
 package acme.features.authenticated.inquiry;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedInquiryListService implements AbstractListService<Authenticated, Inquiry> {
+public class AuthenticatedInquiryListActiveService implements AbstractListService<Authenticated, Inquiry> {
 
 	@Autowired
 	AuthenticatedInquiryRepository repository;
@@ -32,18 +33,15 @@ public class AuthenticatedInquiryListService implements AbstractListService<Auth
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "paragraph", "creation", "deadline", "email", "lowMoney", "highMoney");
+		request.unbind(entity, model, "title", "deadline", "email");
 
 	}
 	@Override
 	public Collection<Inquiry> findMany(final Request<Inquiry> request) {
 		assert request != null;
 
-		Collection<Inquiry> result;
+		return this.repository.findAllActivesInquiries(new Date(System.currentTimeMillis() - 1));
 
-		result = this.repository.findAllInquiry();
-
-		return result;
 	}
 
 }

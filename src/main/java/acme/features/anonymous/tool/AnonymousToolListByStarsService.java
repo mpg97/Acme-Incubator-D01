@@ -40,11 +40,8 @@ public class AnonymousToolListByStarsService implements AbstractListService<Anon
 	public Collection<Tool> findMany(final Request<Tool> request) {
 		assert request != null;
 
-		Collection<Tool> result;
+		return this.repository.findAllToolsOrderedByStars();
 
-		result = this.repository.findAllToolsOrderedByStars();
-
-		return result;
 	}
 
 }

@@ -30,24 +30,18 @@ public class AuthenticatedOvertureShowService implements AbstractShowService<Aut
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "paragraph", "creation", "deadline", "email", "lowMoney", "highMoney");
+		request.unbind(entity, model, "title", "creation", "deadline", "paragraph", "minMoney", "maxMoney", "email");
 
 	}
 
 	@Override
 	public Overture findOne(final Request<Overture> request) {
-		System.out.println("hola");
 		assert request != null;
 
-		Overture result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOvertureById(id);
+		return this.repository.findOvertureById(id);
 
-		System.out.println(result);
-
-		return result;
 	}
 
 }

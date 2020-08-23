@@ -30,7 +30,8 @@ public class AuthenticatedTechnologyShowService implements AbstractShowService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "sector", "inventor", "description", "web", "email", "openSource");
+		request.unbind(entity, model, "title", "investorName", "description", "web", "email", "openSource", "stars");
+		model.setAttribute("sectorName", entity.getSector().getSector());
 
 	}
 
@@ -38,13 +39,9 @@ public class AuthenticatedTechnologyShowService implements AbstractShowService<A
 	public Technology findOne(final Request<Technology> request) {
 		assert request != null;
 
-		Technology result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findTecnologyById(id);
-
-		return result;
+		return this.repository.findTechnologyById(id);
 	}
 
 }

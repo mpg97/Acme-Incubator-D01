@@ -33,7 +33,7 @@ public class AnonymousNoticeListActiveService implements AbstractListService<Ano
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creation", "deadline");
+		request.unbind(entity, model, "title", "header", "deadline");
 
 	}
 
@@ -41,9 +41,7 @@ public class AnonymousNoticeListActiveService implements AbstractListService<Ano
 	public Collection<Notice> findMany(final Request<Notice> request) {
 		assert request != null;
 
-		Collection<Notice> result;
-
-		result = this.repository.findAllActivesNotices(new Date(System.currentTimeMillis() - 1));
+		Collection<Notice> result = this.repository.findAllActivesNotices(new Date(System.currentTimeMillis() - 1));
 
 		return result;
 	}

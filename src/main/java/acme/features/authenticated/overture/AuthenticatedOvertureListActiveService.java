@@ -2,6 +2,7 @@
 package acme.features.authenticated.overture;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedOvertureListService implements AbstractListService<Authenticated, Overture> {
+public class AuthenticatedOvertureListActiveService implements AbstractListService<Authenticated, Overture> {
 
 	@Autowired
 	AuthenticatedOvertureRepository repository;
@@ -32,18 +33,15 @@ public class AuthenticatedOvertureListService implements AbstractListService<Aut
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "paragraph", "creation", "deadline", "email", "lowMoney", "highMoney");
+		request.unbind(entity, model, "title", "deadline", "email");
 
 	}
 	@Override
 	public Collection<Overture> findMany(final Request<Overture> request) {
 		assert request != null;
 
-		Collection<Overture> result;
+		return this.repository.findAllActivesOvertures(new Date(System.currentTimeMillis() - 1));
 
-		result = this.repository.findAllOverture();
-
-		return result;
 	}
 
 }

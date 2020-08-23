@@ -18,9 +18,9 @@ authenticated.notice.form.button.return = Volver
 
 
 
-authenticated.notice.list.label.title = Título:
-authenticated.notice.list.label.body = Cuerpo:
-authenticated.notice.list.label.creation = Creación:
-authenticated.notice.list.label.deadline = Deadline:
-authenticated.notice.list.label.header = Cabecera:
-authenticated.notice.list.label.links = Links:
+authenticated.notice.list.label.title = Título
+authenticated.notice.list.label.body = Cuerpo
+authenticated.notice.list.label.creation = Creación
+authenticated.notice.list.label.deadline = Deadline
+authenticated.notice.list.label.header = Cabecera
+authenticated.notice.list.label.links = Links

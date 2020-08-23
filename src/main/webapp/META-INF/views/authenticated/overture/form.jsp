@@ -17,9 +17,11 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.overture.form.label.title" path="title" />
-	<acme:form-textbox code="authenticated.overture.form.label.paragraph" path="paragraph" />
+	<acme:form-textbox code="authenticated.overture.form.label.creation" path="creation"/>
 	<acme:form-textbox code="authenticated.overture.form.label.deadline" path="deadline"/>
+	<acme:form-textbox code="authenticated.overture.form.label.paragraph" path="paragraph" />
+	<acme:form-money code="authenticated.overture.form.label.minMoney" path="minMoney"/>
+	<acme:form-money code="authenticated.overture.form.label.maxMoney" path="maxMoney"/>
 	<acme:form-textbox code="authenticated.overture.form.label.email" path="email"/>
-	<acme:form-textbox code="authenticated.overture.form.label.lowMoney" path="lowMoney"/>
-	<acme:form-textbox code="authenticated.overture.form.label.highMoney" path="highMoney"/>
-	<acme:form-return code="authenticated.overture.form.button.return"/>	</acme:form>
+	<acme:form-return code="authenticated.overture.form.button.return"/>
+</acme:form>

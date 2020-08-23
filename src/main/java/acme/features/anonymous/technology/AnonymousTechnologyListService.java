@@ -41,9 +41,7 @@ public class AnonymousTechnologyListService implements AbstractListService<Anony
 	public Collection<Technology> findMany(final Request<Technology> request) {
 		assert request != null;
 
-		Collection<Technology> result;
-
-		result = this.repository.findAllTecnologies();
+		Collection<Technology> result = this.repository.findAllTechnologies();
 
 		return result;
 	}

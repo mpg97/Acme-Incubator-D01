@@ -17,11 +17,12 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.tool.form.label.title" path="title" />
-	<acme:form-textbox code="authenticated.tool.form.label.sector" path="sector" />
-	<acme:form-textbox code="authenticated.tool.form.label.description" path="description"/>
+	<acme:form-textbox code="authenticated.tool.form.label.sector" path="sectorName" />
+	<acme:form-textbox code="authenticated.tool.form.label.investorName" path="investorName"/>
+	<acme:form-textarea code="authenticated.tool.form.label.description" path="description"/>
 	<acme:form-textbox code="authenticated.tool.form.label.web" path="web"/>
 	<acme:form-textbox code="authenticated.tool.form.label.email" path="email"/>
-	
-	<acme:form-checkbox code="anonymous.tool.label.openSource" path="openSource"/>
-	<acme:form-return code="authenticated.tool.form.button.return"/>	
-	</acme:form>
+	<acme:form-checkbox code="authenticated.tool.form.label.openSource" path="openSource"/>
+	<acme:form-textbox code="authenticated.tool.form.label.stars" path="stars"/>
+	<acme:form-return code="authenticated.tool.form.button.return"/>
+</acme:form>

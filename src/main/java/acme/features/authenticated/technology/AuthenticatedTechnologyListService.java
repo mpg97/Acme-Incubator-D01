@@ -32,7 +32,8 @@ public class AuthenticatedTechnologyListService implements AbstractListService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "sector", "inventor", "description", "web", "email", "openSource");
+		request.unbind(entity, model, "title", "investorName", "stars");
+		model.setAttribute("sectorName", entity.getSector().getSector());
 
 	}
 
@@ -40,11 +41,8 @@ public class AuthenticatedTechnologyListService implements AbstractListService<A
 	public Collection<Technology> findMany(final Request<Technology> request) {
 		assert request != null;
 
-		Collection<Technology> result;
+		return this.repository.findAllTechnologies();
 
-		result = this.repository.findAllTecnologies();
-
-		return result;
 	}
 
 }

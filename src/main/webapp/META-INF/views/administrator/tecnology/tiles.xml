@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/tecnology/form" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/tecnology/form.jsp" />
+	<definition name="administrator/technology/form" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/technology/form.jsp" />
 	</definition>
 	
-	<definition name="administrator/tecnology/list" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/tecnology/list.jsp" />
+	<definition name="administrator/technology/list" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/technology/list.jsp" />
 	</definition>
 	
 	

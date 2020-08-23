@@ -36,6 +36,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.notice = Notice
+master.menu.administrator.configuration = Configuration
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.provider ########################################################
@@ -51,12 +52,14 @@ master.menu.consumer.favourite-link = Favourite link
 # master.menu.authenticated ##########################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.notice = Notice
+master.menu.authenticated.notice.actives = Active notices
 master.menu.authenticated.technology = Technology
+master.menu.authenticated.technology.orderedByStars = Technologies order by stars
 master.menu.authenticated.tool = Tool
-master.menu.authenticated.inquiry = Inquiry
-master.menu.authenticated.overture = Overture
-master.menu.authenticated.challenge = Challenge
+master.menu.authenticated.tool.orderedByStars = Tools order by stars
+master.menu.authenticated.inquiry.actives = Active inquiries
+master.menu.authenticated.overture.actives = Active overtures
+master.menu.authenticated.challenge.actives = Active challenges
 
 # master.menu.user-account ####################################################
 
@@ -104,7 +107,7 @@ master.license.text = \
 	local storage to keep track of the document to which some buttons must return.
 ###################
 
-master.menu.anonymous.notice = Notice
+master.menu.anonymous.notice.actives = Active notices
 master.menu.anonymous.technology = Technologies
 master.menu.anonymous.technology.orderedByStars = Technologies order by stars
 master.menu.anonymous.tool = Tools

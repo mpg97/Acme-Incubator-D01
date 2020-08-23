@@ -40,11 +40,8 @@ public class AnonymousToolListService implements AbstractListService<Anonymous, 
 	public Collection<Tool> findMany(final Request<Tool> request) {
 		assert request != null;
 
-		Collection<Tool> result;
+		return this.repository.findAllTool();
 
-		result = this.repository.findAllTool();
-
-		return result;
 	}
 
 }

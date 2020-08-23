@@ -19,7 +19,8 @@
 	<acme:form-url code="authenticated.notice.form.label.header" path="header" />
 	<acme:form-textbox code="authenticated.notice.form.label.title" path="title" />
 	<acme:form-textbox code="authenticated.notice.form.label.body" path="body"/>
-	<acme:form-url code="authenticated.notice.form.label.links" path="link"/>
+	<acme:form-textbox code="authenticated.notice.form.label.links" path="link"/>
+	<acme:form-textbox code="authenticated.notice.form.label.creation" path="creation"/>
 	<acme:form-textbox code="authenticated.notice.form.label.deadline" path="deadline"/>
 	<acme:form-return code="authenticated.notice.form.button.return"/>
 </acme:form>

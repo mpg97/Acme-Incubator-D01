@@ -39,13 +39,9 @@ public class AnonymousToolShowService implements AbstractShowService<Anonymous, 
 	public Tool findOne(final Request<Tool> request) {
 		assert request != null;
 
-		Tool result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findToolById(id);
-
-		return result;
+		return this.repository.findToolById(id);
 	}
 
 }

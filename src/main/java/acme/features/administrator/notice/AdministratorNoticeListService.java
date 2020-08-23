@@ -1,10 +1,7 @@
 
 package acme.features.administrator.notice;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +32,7 @@ public class AdministratorNoticeListService implements AbstractListService<Admin
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "body", "creation", "deadline", "header", "link");
+		request.unbind(entity, model, "title", "header", "deadline");
 
 	}
 
@@ -43,24 +40,8 @@ public class AdministratorNoticeListService implements AbstractListService<Admin
 	public Collection<Notice> findMany(final Request<Notice> request) {
 		assert request != null;
 
-		Collection<Notice> result;
+		return this.repository.findAllNotices();
 
-		result = this.repository.findAllNotices();
-
-		List<Notice> active = new ArrayList<>();
-		Date moment = new Date(System.currentTimeMillis() - 1);
-
-		for (Notice n : result) {
-
-			if (n.getDeadline().after(moment)) {
-
-				active.add(n);
-
-			}
-
-		}
-
-		return active;
 	}
 
 }

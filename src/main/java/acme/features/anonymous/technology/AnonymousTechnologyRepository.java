@@ -11,11 +11,11 @@ import acme.framework.repositories.AbstractRepository;
 public interface AnonymousTechnologyRepository extends AbstractRepository {
 
 	@Query("select t from Technology t")
-	Collection<Technology> findAllTecnologies();
+	Collection<Technology> findAllTechnologies();
 
 	@Query("select t from Technology t where t.id = ?1")
-	Technology findTecnologyById(int id);
+	Technology findTechnologyById(int id);
 
 	@Query("SELECT t FROM Technology t ORDER BY t.stars desc")
-	Collection<Technology> findAllTecnologiesOrderedByStars();
+	Collection<Technology> findAllTechnologiesOrderedByStars();
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.overture.Overture;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
@@ -17,15 +18,15 @@ import acme.framework.entities.Authenticated;
 public class AuthenticatedOvertureController extends AbstractController<Authenticated, Overture> {
 
 	@Autowired(required = true)
-	private AuthenticatedOvertureListService	listService;
+	private AuthenticatedOvertureListActiveService	listActiveService;
 
 	@Autowired(required = true)
-	private AuthenticatedOvertureShowService	showService;
+	private AuthenticatedOvertureShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addCustomCommand(CustomCommand.LIST_ACTIVE, BasicCommand.LIST, this.listActiveService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

@@ -32,18 +32,16 @@ public class AuthenticatedToolListService implements AbstractListService<Authent
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "sector", "inventor", "description", "web", "email", "openSource");
+		request.unbind(entity, model, "title", "investorName", "stars");
+		model.setAttribute("sectorName", entity.getSector().getSector());
 
 	}
 	@Override
 	public Collection<Tool> findMany(final Request<Tool> request) {
 		assert request != null;
 
-		Collection<Tool> result;
+		return this.repository.findAllTool();
 
-		result = this.repository.findAllTool();
-
-		return result;
 	}
 
 }

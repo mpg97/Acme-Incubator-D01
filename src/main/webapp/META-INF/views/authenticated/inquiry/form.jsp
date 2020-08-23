@@ -17,9 +17,11 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.inquiry.form.label.title" path="title" />
-	<acme:form-textbox code="authenticated.inquiry.form.label.paragraph" path="paragraph" />
+	<acme:form-textbox code="authenticated.inquiry.form.label.creation" path="creation"/>
 	<acme:form-textbox code="authenticated.inquiry.form.label.deadline" path="deadline"/>
+	<acme:form-textbox code="authenticated.inquiry.form.label.paragraph" path="paragraph" />
+	<acme:form-money code="authenticated.inquiry.form.label.minMoney" path="minMoney"/>
+	<acme:form-money code="authenticated.inquiry.form.label.maxMoney" path="maxMoney"/>
 	<acme:form-textbox code="authenticated.inquiry.form.label.email" path="email"/>
-	<acme:form-money code="authenticated.inquiry.form.label.lowMoney" path="lowMoney"/>
-	<acme:form-money code="authenticated.inquiry.form.label.highMoney" path="highMoney"/>
-	<acme:form-return code="authenticated.inquiry.form.button.return"/>	</acme:form>
+	<acme:form-return code="authenticated.inquiry.form.button.return"/>
+</acme:form>

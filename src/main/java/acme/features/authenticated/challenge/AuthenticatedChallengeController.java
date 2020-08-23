@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.challenge.Challenge;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
@@ -17,15 +18,15 @@ import acme.framework.entities.Authenticated;
 public class AuthenticatedChallengeController extends AbstractController<Authenticated, Challenge> {
 
 	@Autowired(required = true)
-	private AuthenticatedChallengeListService	listService;
+	private AuthenticatedChallengeListActiveService	listActiveService;
 
 	@Autowired(required = true)
-	private AuthenticatedChallengeShowService	showService;
+	private AuthenticatedChallengeShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addCustomCommand(CustomCommand.LIST_ACTIVE, BasicCommand.LIST, this.listActiveService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

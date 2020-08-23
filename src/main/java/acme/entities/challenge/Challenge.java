@@ -5,11 +5,15 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import acme.entities.targets.AverageTarget;
+import acme.entities.targets.ExpertTarget;
+import acme.entities.targets.RookieTarget;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,25 +37,13 @@ public class Challenge extends DomainEntity {
 	@Column(length = 1024)
 	private String				description;
 
-	//	@NotNull
-	//	private Money				rockieReward;
-	//
-	//	@NotNull
-	//	private Money				averageReward;
-	//
-	//	@NotNull
-	//	private Money				expertReward;
-	//
-	//	@NotBlank
-	//	@Column(length = 50)
-	//	private String				rockieGoal;
-	//
-	//	@NotBlank
-	//	@Column(length = 50)
-	//	private String				averageGoal;
-	//
-	//	@NotBlank
-	//	@Column(length = 50)
-	//	private String				expertGoal;
+	@OneToOne(optional = false)
+	private RookieTarget		rookie;
+
+	@OneToOne(optional = false)
+	private AverageTarget		average;
+
+	@OneToOne(optional = false)
+	private ExpertTarget		expert;
 
 }

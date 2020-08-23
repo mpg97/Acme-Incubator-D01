@@ -18,8 +18,9 @@
 
 <acme:list>
 	<acme:list-column code="anonymous.notice.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.notice.list.label.creation" path="creation" width="40%"/>	
-	<acme:list-column code="anonymous.notice.list.label.deadline" path="deadline" width="40%"/>		
+	<acme:list-column code="anonymous.notice.list.label.deadline" path="header" width="40%"/>
+	<acme:list-column code="anonymous.notice.list.label.creation" path="deadline" width="40%"/>	
+			
 </acme:list>
 
 

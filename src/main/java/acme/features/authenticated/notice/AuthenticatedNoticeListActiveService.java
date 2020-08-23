@@ -1,10 +1,8 @@
 
 package acme.features.authenticated.notice;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +14,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedNoticeListService implements AbstractListService<Authenticated, Notice> {
+public class AuthenticatedNoticeListActiveService implements AbstractListService<Authenticated, Notice> {
 
 	@Autowired
 	AuthenticatedNoticeRepository repository;
@@ -35,7 +33,7 @@ public class AuthenticatedNoticeListService implements AbstractListService<Authe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "body", "creation", "deadline", "header", "link");
+		request.unbind(entity, model, "title", "header", "deadline");
 
 	}
 
@@ -43,24 +41,9 @@ public class AuthenticatedNoticeListService implements AbstractListService<Authe
 	public Collection<Notice> findMany(final Request<Notice> request) {
 		assert request != null;
 
-		Collection<Notice> result;
+		Collection<Notice> result = this.repository.findAllActivesNotices(new Date(System.currentTimeMillis() - 1));
 
-		result = this.repository.findAllNotices();
-
-		List<Notice> active = new ArrayList<>();
-		Date moment = new Date(System.currentTimeMillis() - 1);
-
-		for (Notice n : result) {
-
-			if (n.getDeadline().after(moment)) {
-
-				active.add(n);
-
-			}
-
-		}
-
-		return active;
+		return result;
 	}
 
 }

@@ -22,7 +22,7 @@
 	<acme:form-textarea code="anonymous.tool.form.label.description" path="description"/>
 	<acme:form-textbox code="anonymous.tool.form.label.web" path="web"/>
 	<acme:form-textbox code="anonymous.tool.form.label.email" path="email"/>
-	<acme:form-checkbox code="anonymous.tool.label.openSource" path="openSource"/>
+	<acme:form-checkbox code="anonymous.tool.form.label.openSource" path="openSource"/>
 	<acme:form-textbox code="anonymous.tool.form.label.stars" path="stars"/>
-	<acme:form-return code="anonymous.tool.form.button.return"/>	
-	</acme:form>
+	<acme:form-return code="anonymous.tool.form.button.return"/>
+</acme:form>

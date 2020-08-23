@@ -39,13 +39,9 @@ public class AnonymousTechnologyShowService implements AbstractShowService<Anony
 	public Technology findOne(final Request<Technology> request) {
 		assert request != null;
 
-		Technology result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findTecnologyById(id);
-
-		return result;
+		return this.repository.findTechnologyById(id);
 	}
 
 }

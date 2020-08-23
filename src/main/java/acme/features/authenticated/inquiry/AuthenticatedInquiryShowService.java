@@ -30,7 +30,7 @@ public class AuthenticatedInquiryShowService implements AbstractShowService<Auth
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "paragraph", "creation", "deadline", "email", "lowMoney", "highMoney");
+		request.unbind(entity, model, "title", "creation", "deadline", "paragraph", "minMoney", "maxMoney", "email");
 
 	}
 
@@ -38,13 +38,10 @@ public class AuthenticatedInquiryShowService implements AbstractShowService<Auth
 	public Inquiry findOne(final Request<Inquiry> request) {
 		assert request != null;
 
-		Inquiry result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findInquiryById(id);
+		return this.repository.findInquiryById(id);
 
-		return result;
 	}
 
 }

@@ -17,9 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="administrator.tecnology.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="administrator.tecnology.list.label.inventor" path="inventor" width="40%"/>
-	<acme:list-column code="administrator.tecnology.list.label.sector" path="sector" width="40%"/>		
+	<acme:list-column code="administrator.technology.list.label.title" path="title" width="20%"/>
+	<acme:list-column code="administrator.technology.list.label.inventor" path="inventor" width="40%"/>
+	<acme:list-column code="administrator.technology.list.label.sector" path="sector" width="40%"/>		
 </acme:list>
 
 

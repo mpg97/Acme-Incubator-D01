@@ -42,13 +42,9 @@ public class AdministratorNoticeShowService implements AbstractShowService<Admin
 	public Notice findOne(final Request<Notice> request) {
 		assert request != null;
 
-		Notice result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findNoticeById(id);
-
-		return result;
+		return this.repository.findNoticeById(id);
 	}
 
 }

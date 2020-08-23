@@ -30,7 +30,16 @@ public class AuthenticatedChallengeShowService implements AbstractShowService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "rockieGoal", "averageGoal", "expertGoal", "rockieReward", "averageReward", "expertReward");
+		request.unbind(entity, model, "title", "deadline", "description");
+
+		model.setAttribute("rookieGoal", entity.getRookie().getGoal());
+		model.setAttribute("rookieReward", entity.getRookie().getReward());
+
+		model.setAttribute("averageGoal", entity.getAverage().getGoal());
+		model.setAttribute("averageReward", entity.getAverage().getReward());
+
+		model.setAttribute("expertGoal", entity.getExpert().getGoal());
+		model.setAttribute("expertReward", entity.getExpert().getReward());
 
 	}
 
@@ -38,13 +47,10 @@ public class AuthenticatedChallengeShowService implements AbstractShowService<Au
 	public Challenge findOne(final Request<Challenge> request) {
 		assert request != null;
 
-		Challenge result;
-		int id;
+		int id = request.getModel().getInteger("id");
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findChallengeById(id);
+		return this.repository.findChallengeById(id);
 
-		return result;
 	}
 
 }

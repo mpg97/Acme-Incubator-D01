@@ -30,12 +30,18 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.notice.actives = Avisos activos
+master.menu.anonymous.technology = Tecnologías
+master.menu.anonymous.technology.orderedByStars = Tecnologías ordenadas por estrellas
+master.menu.anonymous.tool = Herramientas
+master.menu.anonymous.tool.orderedByStars = Herramientas ordenadas por estrellas
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
-master.menu.administrator.notice = Aviso
+master.menu.administrator.notice = Avisos
+master.menu.administrator.configuration = Configuración
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.provider ########################################################
@@ -50,13 +56,15 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 # master.menu.authenticated ##########################################################
 
-master.menu.authenticated = Authenticated
-master.menu.authenticated.notice = Aviso
-master.menu.authenticated.technology = Tecnología
-master.menu.authenticated.tool = Herramienta
-master.menu.authenticated.inquiry = Investigación
-master.menu.authenticated.overture = Propuesta
-master.menu.authenticated.challenge = Desafio
+master.menu.authenticated = Autentificado
+master.menu.authenticated.notice.actives = Avisos activos
+master.menu.authenticated.technology = Tecnologías
+master.menu.authenticated.technology.orderedByStars = Tecnologías ordenadas por estrellas
+master.menu.authenticated.tool = Herramientas
+master.menu.authenticated.tool.orderedByStars = Herramientas ordenadas por estrellas
+master.menu.authenticated.inquiry.actives = Investigaciónes activas
+master.menu.authenticated.overture.actives = Propuestas activas
+master.menu.authenticated.challenge.actives = Desafios activos
 
 
 # master.menu.user-account ####################################################

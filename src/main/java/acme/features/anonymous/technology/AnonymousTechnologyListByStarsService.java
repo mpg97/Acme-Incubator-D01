@@ -41,9 +41,7 @@ public class AnonymousTechnologyListByStarsService implements AbstractListServic
 	public Collection<Technology> findMany(final Request<Technology> request) {
 		assert request != null;
 
-		Collection<Technology> result;
-
-		result = this.repository.findAllTecnologiesOrderedByStars();
+		Collection<Technology> result = this.repository.findAllTechnologiesOrderedByStars();
 
 		return result;
 	}

@@ -11,17 +11,21 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
-    alter table `average_target` 
+    alter table `challenge` 
        drop 
-       foreign key `FKl6lw8n6u4r8ia4il2u76yc13i`;
+       foreign key `FKpls1ankqsd5bj9qeivrin6her`;
+
+    alter table `challenge` 
+       drop 
+       foreign key `FK1fq97er7qk6wbc1a5lr8av9pe`;
+
+    alter table `challenge` 
+       drop 
+       foreign key `FK630cbp6ixepifihtmort1eh00`;
 
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
-
-    alter table `expert_target` 
-       drop 
-       foreign key `FKp5whls9srfk796q41n5n5r49v`;
 
     alter table `provider` 
        drop 
@@ -30,10 +34,6 @@
     alter table `record` 
        drop 
        foreign key `FK5m3d06dehg19dco3s011wvwjo`;
-
-    alter table `rookie_target` 
-       drop 
-       foreign key `FKg1tmyplqd3nd7swj38ynfp4gv`;
 
     alter table `technology` 
        drop 

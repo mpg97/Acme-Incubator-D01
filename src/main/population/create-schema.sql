@@ -87,7 +87,6 @@
         `goal` varchar(50),
         `reward_amount` double precision,
         `reward_currency` varchar(255),
-        `challenge_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -162,7 +161,6 @@
         `goal` varchar(50),
         `reward_amount` double precision,
         `reward_currency` varchar(255),
-        `challenge_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -246,20 +244,25 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `average_target` 
-       add constraint `FKl6lw8n6u4r8ia4il2u76yc13i` 
-       foreign key (`challenge_id`) 
-       references `challenge` (`id`);
+    alter table `challenge` 
+       add constraint `FKpls1ankqsd5bj9qeivrin6her` 
+       foreign key (`average_id`) 
+       references `average_target` (`id`);
+
+    alter table `challenge` 
+       add constraint `FK1fq97er7qk6wbc1a5lr8av9pe` 
+       foreign key (`expert_id`) 
+       references `expert_target` (`id`);
+
+    alter table `challenge` 
+       add constraint `FK630cbp6ixepifihtmort1eh00` 
+       foreign key (`rookie_id`) 
+       references `rookie_target` (`id`);
 
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `expert_target` 
-       add constraint `FKp5whls9srfk796q41n5n5r49v` 
-       foreign key (`challenge_id`) 
-       references `challenge` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
@@ -270,11 +273,6 @@
        add constraint `FK5m3d06dehg19dco3s011wvwjo` 
        foreign key (`sector_id`) 
        references `sector` (`id`);
-
-    alter table `rookie_target` 
-       add constraint `FKg1tmyplqd3nd7swj38ynfp4gv` 
-       foreign key (`challenge_id`) 
-       references `challenge` (`id`);
 
     alter table `technology` 
        add constraint FK_g9x1pskolrbtgfufi3u6ooin8 

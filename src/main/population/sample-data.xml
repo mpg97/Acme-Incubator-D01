@@ -202,9 +202,23 @@
 
 		<property name="title" value="My third technology" />
 		<property name="sector">
-			<ref bean="Sector01" />
+			<ref bean="Sector02" />
 		</property>
 		<property name="investorName" value="Jawed Karim" />
+		<property name="description" value="I want a description" />
+		<property name="web" value="https://www.youtube.com/" />
+		<property name="email" value="support@youtube.com" />
+		<property name="openSource" value="1" />
+		<property name="stars" value="4.52" />
+	</bean>
+	
+	<bean id="technology04" class="acme.entities.technology.Technology">
+
+		<property name="title" value="My fourth technology" />
+		<property name="sector">
+			<ref bean="Sector02" />
+		</property>
+		<property name="investorName" value="Joe Williams" />
 		<property name="description" value="I want a description" />
 		<property name="web" value="https://www.youtube.com/" />
 		<property name="email" value="support@youtube.com" />
@@ -247,6 +261,20 @@
 			<ref bean="Sector02" />
 		</property>
 		<property name="investorName" value="Jeff Bezos" />
+		<property name="description" value="I want a description" />
+		<property name="web" value="https://www.amazon.com/" />
+		<property name="email" value="info@amazon.com" />
+		<property name="openSource" value="1" />
+		<property name="stars" value="2.0" />
+	</bean>
+	
+	<bean id="tool04" class="acme.entities.tool.Tool">
+
+		<property name="title" value="My fourth tool" />
+		<property name="sector">
+			<ref bean="Sector02" />
+		</property>
+		<property name="investorName" value="John Johnson" />
 		<property name="description" value="I want a description" />
 		<property name="web" value="https://www.amazon.com/" />
 		<property name="email" value="info@amazon.com" />

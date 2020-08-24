@@ -16,6 +16,9 @@ public interface AuthenticatedTechnologyRepository extends AbstractRepository {
 	@Query("select t from Technology t where t.id = ?1")
 	Technology findTechnologyById(int id);
 
-	@Query("SELECT t FROM Technology t ORDER BY t.stars desc")
+	@Query("SELECT t FROM Technology t ORDER BY t.stars DESC")
 	Collection<Technology> findAllTechnologiesOrderedByStars();
+
+	@Query("SELECT t FROM Technology t ORDER BY t.sector.sector ASC")
+	Collection<Technology> findAllTechnologiesOrderedBySector();
 }

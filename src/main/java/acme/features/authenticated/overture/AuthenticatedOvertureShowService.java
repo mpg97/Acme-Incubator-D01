@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.overture;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,11 @@ public class AuthenticatedOvertureShowService implements AbstractShowService<Aut
 	public boolean authorise(final Request<Overture> request) {
 		assert request != null;
 
-		return true;
+		int overtureId = request.getModel().getInteger("id");
+		Overture overture = this.repository.findOvertureById(overtureId);
+		boolean res = overture.getDeadline().compareTo(new Date(System.currentTimeMillis() - 1)) > 0;
+
+		return res;
 	}
 
 	@Override

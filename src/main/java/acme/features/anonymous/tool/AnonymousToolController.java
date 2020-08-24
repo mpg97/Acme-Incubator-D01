@@ -18,19 +18,23 @@ import acme.framework.entities.Anonymous;
 public class AnonymousToolController extends AbstractController<Anonymous, Tool> {
 
 	@Autowired
-	private AnonymousToolListService		listService;
+	private AnonymousToolListService			listService;
 
 	@Autowired
-	private AnonymousToolListByStarsService	listByStarsService;
+	private AnonymousToolListByStarsService		listByStarsService;
 
 	@Autowired
-	private AnonymousToolShowService		showService;
+	private AnonymousToolListBySectorService	listBySectorService;
+
+	@Autowired
+	private AnonymousToolShowService			showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addCustomCommand(CustomCommand.LIST_BY_STARS, BasicCommand.LIST, this.listByStarsService);
+		super.addCustomCommand(CustomCommand.LIST_BY_SECTOR, BasicCommand.LIST, this.listBySectorService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 

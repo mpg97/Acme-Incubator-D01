@@ -24,6 +24,9 @@ public class AnonymousTechnologyController extends AbstractController<Anonymous,
 	private AnonymousTechnologyListByStarsService	listByStarsService;
 
 	@Autowired
+	private AnonymousTechnologyListBySectorService	listBySectorService;
+
+	@Autowired
 	private AnonymousTechnologyShowService			showService;
 
 
@@ -31,6 +34,7 @@ public class AnonymousTechnologyController extends AbstractController<Anonymous,
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addCustomCommand(CustomCommand.LIST_BY_STARS, BasicCommand.LIST, this.listByStarsService);
+		super.addCustomCommand(CustomCommand.LIST_BY_SECTOR, BasicCommand.LIST, this.listBySectorService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 

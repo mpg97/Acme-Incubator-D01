@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.inquiry;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,11 @@ public class AuthenticatedInquiryShowService implements AbstractShowService<Auth
 	public boolean authorise(final Request<Inquiry> request) {
 		assert request != null;
 
-		return true;
+		int inquiryId = request.getModel().getInteger("id");
+		Inquiry inquiry = this.repository.findInquiryById(inquiryId);
+		boolean res = inquiry.getDeadline().compareTo(new Date(System.currentTimeMillis() - 1)) > 0;
+
+		return res;
 	}
 
 	@Override

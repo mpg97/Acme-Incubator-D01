@@ -26,11 +26,15 @@ public class AuthenticatedTechnologyController extends AbstractController<Authen
 	@Autowired(required = true)
 	private AuthenticatedTechnologyListByStarsService	listByStarsService;
 
+	@Autowired(required = true)
+	private AuthenticatedTechnologyListBySectorService	listBySectorService;
+
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addCustomCommand(CustomCommand.LIST_BY_STARS, BasicCommand.LIST, this.listByStarsService);
+		super.addCustomCommand(CustomCommand.LIST_BY_SECTOR, BasicCommand.LIST, this.listBySectorService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

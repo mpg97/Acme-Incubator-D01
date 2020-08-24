@@ -10,7 +10,7 @@
 - they accept any liabilities with respect to them.
 --%>
 
-<%@page language="java" import="acme.framework.helpers.PrincipalHelper,acme.entities.roles.Provider,acme.entities.roles.Consumer"%>
+<%@page language="java" import="acme.framework.helpers.PrincipalHelper"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
@@ -24,10 +24,12 @@
 			<acme:menu-suboption code="master.menu.anonymous.notice.actives" action="/anonymous/notice/list-active" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.technology" action="/anonymous/technology/list" />
-			<acme:menu-suboption code="master.menu.anonymous.technology.orderedByStars" action="/anonymous/technology/list-by-stars" />
+			<acme:menu-suboption code="master.menu.anonymous.technology.bySector" action="/anonymous/technology/list-by-sector" />
+			<acme:menu-suboption code="master.menu.anonymous.technology.byStars" action="/anonymous/technology/list-by-stars" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.tool" action="/anonymous/tool/list" />
-			<acme:menu-suboption code="master.menu.anonymous.tool.orderedByStars" action="/anonymous/tool/list-by-stars" />
+			<acme:menu-suboption code="master.menu.anonymous.tool.bySector" action="/anonymous/tool/list-by-sector" />
+			<acme:menu-suboption code="master.menu.anonymous.tool.byStars" action="/anonymous/tool/list-by-stars" />
 
 		</acme:menu-option>
 
@@ -52,10 +54,12 @@
 			<acme:menu-suboption code="master.menu.authenticated.notice.actives" action="/authenticated/notice/list-active" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.technology" action="/authenticated/technology/list" />
-			<acme:menu-suboption code="master.menu.authenticated.technology.orderedByStars" action="/authenticated/technology/list-by-stars" />
+			<acme:menu-suboption code="master.menu.authenticated.technology.bySector" action="/authenticated/technology/list-by-sector" />
+			<acme:menu-suboption code="master.menu.authenticated.technology.byStars" action="/authenticated/technology/list-by-stars" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.tool" action="/authenticated/tool/list" />
-			<acme:menu-suboption code="master.menu.authenticated.tool.orderedByStars" action="/authenticated/tool/list-by-stars" />
+			<acme:menu-suboption code="master.menu.authenticated.tool.bySector" action="/authenticated/tool/list-by-sector" />
+			<acme:menu-suboption code="master.menu.authenticated.tool.byStars" action="/authenticated/tool/list-by-stars" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.inquiry.actives" action="/authenticated/inquiry/list-active" />
 			<acme:menu-separator/>

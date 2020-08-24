@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.challenge;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,11 @@ public class AuthenticatedChallengeShowService implements AbstractShowService<Au
 	public boolean authorise(final Request<Challenge> request) {
 		assert request != null;
 
-		return true;
+		int challengeId = request.getModel().getInteger("id");
+		Challenge challenge = this.repository.findChallengeById(challengeId);
+		boolean res = challenge.getDeadline().compareTo(new Date(System.currentTimeMillis() - 1)) > 0;
+
+		return res;
 	}
 
 	@Override

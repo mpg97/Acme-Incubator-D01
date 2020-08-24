@@ -1,6 +1,8 @@
 
 package acme.features.anonymous.notice;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +27,11 @@ public class AnonymousNoticeShowService implements AbstractShowService<Anonymous
 	public boolean authorise(final Request<Notice> request) {
 		assert request != null;
 
-		return true;
+		int noticeId = request.getModel().getInteger("id");
+		Notice notice = this.repository.findNoticeById(noticeId);
+		boolean res = notice.getDeadline().compareTo(new Date(System.currentTimeMillis() - 1)) > 0;
+
+		return res;
 	}
 
 	@Override

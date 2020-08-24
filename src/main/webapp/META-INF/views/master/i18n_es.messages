@@ -32,9 +32,11 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.notice.actives = Avisos activos
 master.menu.anonymous.technology = Tecnologías
-master.menu.anonymous.technology.orderedByStars = Tecnologías ordenadas por estrellas
+master.menu.anonymous.technology.byStars = Tecnologías por estrellas
+master.menu.anonymous.technology.bySector = Tecnologías por sector
 master.menu.anonymous.tool = Herramientas
-master.menu.anonymous.tool.orderedByStars = Herramientas ordenadas por estrellas
+master.menu.anonymous.tool.byStars = Herramientas por estrellas
+master.menu.anonymous.tool.bySector = Herramientas por sector
 
 # master.menu.administrator ###################################################
 
@@ -59,9 +61,11 @@ master.menu.consumer.favourite-link = Enlace favorito
 master.menu.authenticated = Autentificado
 master.menu.authenticated.notice.actives = Avisos activos
 master.menu.authenticated.technology = Tecnologías
-master.menu.authenticated.technology.orderedByStars = Tecnologías ordenadas por estrellas
+master.menu.authenticated.technology.byStars = Tecnologías por estrellas
+master.menu.authenticated.technology.bySector = Tecnologías por sector
 master.menu.authenticated.tool = Herramientas
-master.menu.authenticated.tool.orderedByStars = Herramientas ordenadas por estrellas
+master.menu.authenticated.tool.byStars = Herramientas por estrellas
+master.menu.authenticated.tool.bySector = Herramientas por sector
 master.menu.authenticated.inquiry.actives = Investigaciónes activas
 master.menu.authenticated.overture.actives = Propuestas activas
 master.menu.authenticated.challenge.actives = Desafios activos

@@ -173,6 +173,7 @@ CustomCommand
 --
 + LIST_ACTIVE
 + LIST_BY_STARS
++ LIST_BY_SECTOR
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>

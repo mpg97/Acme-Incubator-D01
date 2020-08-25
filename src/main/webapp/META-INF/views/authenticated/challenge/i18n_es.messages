@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 authenticated.challenge.form.label.title = Título:
-authenticated.challenge.form.label.deadline = Deadline:
+authenticated.challenge.form.label.deadline = Fecha fin:
 authenticated.challenge.form.label.description = Descripción:
 authenticated.challenge.form.label.rookieReward = Recompensa para principiantes:
 authenticated.challenge.form.label.averageReward = Recompensa para intermediantes:

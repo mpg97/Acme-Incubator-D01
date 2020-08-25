@@ -24,3 +24,4 @@ authenticated.overture.list.label.deadline = Deadline
 authenticated.overture.list.label.email = Email
 authenticated.overture.list.label.minMoney = Minimum money
 authenticated.overture.list.label.maxMoney  = Maximum money
+authenticated.overture.list.label.range = Range of money

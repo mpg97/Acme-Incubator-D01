@@ -10,8 +10,8 @@
 
 authenticated.notice.form.label.title = Título:
 authenticated.notice.form.label.body = Cuerpo:
-authenticated.notice.form.label.creation = Creación:
-authenticated.notice.form.label.deadline = Deadline:
+authenticated.notice.form.label.creation = Fecha inicio:
+authenticated.notice.form.label.deadline = Fecha fin:
 authenticated.notice.form.label.header = Cabecera:
 authenticated.notice.form.label.links = Links:
 authenticated.notice.form.button.return = Volver

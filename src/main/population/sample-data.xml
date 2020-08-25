@@ -56,7 +56,7 @@
 			<ref bean="Money01" />
 		</property>
 		<property name="maxMoney">
-			<ref bean="Money01" />
+			<ref bean="Money02" />
 		</property>
 		<property name="email" value="abc@us.es" />
 
@@ -69,10 +69,10 @@
 		<property name="deadline" value="2021/4/15 11:10" />
 		<property name="paragraph" value="I want a description" />
 		<property name="minMoney">
-			<ref bean="Money01" />
+			<ref bean="Money02" />
 		</property>
 		<property name="maxMoney">
-			<ref bean="Money01" />
+			<ref bean="Money03" />
 		</property>
 		<property name="email" value="times@news.com" />
 
@@ -167,7 +167,7 @@
 
 	<bean id="Money03" class="acme.framework.datatypes.Money">
 		<property name="amount" value="2100.0" />
-		<property name="currency" value="€" />
+		<property name="currency" value="EUR" />
 	</bean>
 
 	<bean id="technology01" class="acme.entities.technology.Technology">
@@ -181,7 +181,7 @@
 		<property name="web" value="https://www.hackerrank.com/" />
 		<property name="email" value="support@hackerrank.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="4.51" />
+		<property name="stars" value="4" />
 	</bean>
 
 	<bean id="technology02" class="acme.entities.technology.Technology">
@@ -195,7 +195,7 @@
 		<property name="web" value="https://www.linkedin.com/" />
 		<property name="email" value="support@linkedin.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="5.0" />
+		<property name="stars" value="5" />
 	</bean>
 
 	<bean id="technology03" class="acme.entities.technology.Technology">
@@ -209,7 +209,7 @@
 		<property name="web" value="https://www.youtube.com/" />
 		<property name="email" value="support@youtube.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="4.52" />
+		<property name="stars" value="4" />
 	</bean>
 	
 	<bean id="technology04" class="acme.entities.technology.Technology">
@@ -223,7 +223,7 @@
 		<property name="web" value="https://www.youtube.com/" />
 		<property name="email" value="support@youtube.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="4.52" />
+		<property name="stars" value="4" />
 	</bean>
 
 	<bean id="tool01" class="acme.entities.tool.Tool">
@@ -237,7 +237,7 @@
 		<property name="web" value="https://www.deepl.com/" />
 		<property name="email" value="info@deepl.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="3.5" />
+		<property name="stars" value="3" />
 	</bean>
 
 	<bean id="tool02" class="acme.entities.tool.Tool">
@@ -251,7 +251,7 @@
 		<property name="web" value="https://www.microsoft.com/" />
 		<property name="email" value="info@microsoft.com" />
 		<property name="openSource" value="0" />
-		<property name="stars" value="4.0" />
+		<property name="stars" value="4" />
 	</bean>
 
 	<bean id="tool03" class="acme.entities.tool.Tool">
@@ -265,7 +265,7 @@
 		<property name="web" value="https://www.amazon.com/" />
 		<property name="email" value="info@amazon.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="2.0" />
+		<property name="stars" value="2" />
 	</bean>
 	
 	<bean id="tool04" class="acme.entities.tool.Tool">
@@ -279,7 +279,7 @@
 		<property name="web" value="https://www.amazon.com/" />
 		<property name="email" value="info@amazon.com" />
 		<property name="openSource" value="1" />
-		<property name="stars" value="2.0" />
+		<property name="stars" value="2" />
 	</bean>
 
 	<bean id="Sector01" class="acme.entities.sector.Sector">

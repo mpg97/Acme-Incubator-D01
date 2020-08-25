@@ -9,8 +9,9 @@
 # they accept any liabilities with respect to them.
 
 authenticated.overture.form.label.title = Título:
-authenticated.overture.form.label.sector = Sector:
 authenticated.overture.form.label.paragraph = Párrafo:
+authenticated.overture.form.label.creation = Fecha inicio:
+authenticated.overture.form.label.deadline = Fecha fin:
 authenticated.overture.form.label.web = Web:
 authenticated.overture.form.label.email = Email:
 authenticated.overture.form.label.minMoney = Mínimo dinero:
@@ -18,9 +19,10 @@ authenticated.overture.form.label.maxMoney = Máximo dinero:
 authenticated.overture.form.button.return = Volver
 
 authenticated.overture.list.label.title = Título
-authenticated.overture.list.label.sector = Sector
 authenticated.overture.list.label.paragraph = Párrafo
+authenticated.overture.list.label.deadline = Fecha fín
 authenticated.overture.list.label.web = Web
 authenticated.overture.list.label.email = Email
 authenticated.overture.list.label.minMoney = Mínimo dinero
 authenticated.overture.list.label.maxMoney  = Máximo dinero
+authenticated.overture.list.label.range = Rango de dinero

@@ -33,7 +33,8 @@ public class AuthenticatedInquiryListActiveService implements AbstractListServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "email");
+		request.unbind(entity, model, "title", "deadline");
+		model.setAttribute("range", entity.getMinMoney().getAmount() + entity.getMinMoney().getCurrency() + "  -  " + entity.getMaxMoney().getAmount() + entity.getMaxMoney().getCurrency());
 
 	}
 	@Override

@@ -23,7 +23,7 @@
 	<acme:form-textbox code="authenticated.technology.form.label.web" path="web"/>
 	<acme:form-textbox code="authenticated.technology.form.label.email" path="email"/>
 	<acme:form-checkbox code="authenticated.technology.form.label.openSource" path="openSource"/>
-	<acme:form-textbox code="authenticated.technology.form.label.stars" path="stars"/>
+	<acme:form-integer code="authenticated.technology.form.label.stars" placeholder="0...5" path="stars"/>
 	<acme:form-return code="authenticated.notice.form.button.return"/>	
 	
 </acme:form>

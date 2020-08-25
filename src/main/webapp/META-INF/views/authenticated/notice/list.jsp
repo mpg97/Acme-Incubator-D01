@@ -18,8 +18,8 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.notice.list.label.title" path="title" width="20%" />
-	<acme:list-column code="authenticated.notice.list.label.deadline" path="header" width="40%" />
-	<acme:list-column code="authenticated.notice.list.label.creation" path="deadline" width="40%" />
+	<acme:list-column code="authenticated.notice.list.label.header" path="header" width="40%" />
+	<acme:list-column code="authenticated.notice.list.label.deadline" path="deadline" width="40%" />
 	
 </acme:list>
 

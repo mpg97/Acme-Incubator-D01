@@ -3,7 +3,9 @@ package acme.entities.record;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -20,6 +22,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "stars"), @Index(columnList = "sector")
+})
 public class Record extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -48,7 +53,7 @@ public class Record extends DomainEntity {
 	private Boolean				openSource;
 
 	@Range(min = 0, max = 5)
-	private Double				stars;
+	private Integer				stars;
 
 	//
 

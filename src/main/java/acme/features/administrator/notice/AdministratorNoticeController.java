@@ -16,10 +16,10 @@ import acme.framework.entities.Administrator;
 @RequestMapping("/administrator/notice/")
 public class AdministratorNoticeController extends AbstractController<Administrator, Notice> {
 
-	@Autowired(required = true)
+	@Autowired
 	private AdministratorNoticeListService	listService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AdministratorNoticeShowService	showService;
 
 

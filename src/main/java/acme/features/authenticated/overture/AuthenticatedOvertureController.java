@@ -17,10 +17,10 @@ import acme.framework.entities.Authenticated;
 @RequestMapping("/authenticated/overture/")
 public class AuthenticatedOvertureController extends AbstractController<Authenticated, Overture> {
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedOvertureListActiveService	listActiveService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedOvertureShowService		showService;
 
 

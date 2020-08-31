@@ -17,10 +17,10 @@ import acme.framework.entities.Authenticated;
 @RequestMapping("/authenticated/challenge/")
 public class AuthenticatedChallengeController extends AbstractController<Authenticated, Challenge> {
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedChallengeListActiveService	listActiveService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedChallengeShowService		showService;
 
 

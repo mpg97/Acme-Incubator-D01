@@ -17,10 +17,10 @@ import acme.framework.entities.Authenticated;
 @RequestMapping("/authenticated/inquiry/")
 public class AuthenticatedInquiryController extends AbstractController<Authenticated, Inquiry> {
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedInquiryListActiveService	listActiveService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedInquiryShowService			showService;
 
 

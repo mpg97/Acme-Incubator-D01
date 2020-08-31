@@ -17,16 +17,16 @@ import acme.framework.entities.Authenticated;
 @RequestMapping("/authenticated/technology/")
 public class AuthenticatedTechnologyController extends AbstractController<Authenticated, Technology> {
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedTechnologyShowService			showService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedTechnologyListService			listService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedTechnologyListByStarsService	listByStarsService;
 
-	@Autowired(required = true)
+	@Autowired
 	private AuthenticatedTechnologyListBySectorService	listBySectorService;
 
 

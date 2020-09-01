@@ -11,6 +11,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
@@ -31,22 +32,27 @@ public class Record extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 50)
+	@Length(max = 50)
 	private String				title;
 
 	@NotBlank
 	@Column(length = 50)
+	@Length(max = 50)
 	private String				investorName;
 
 	@NotBlank
 	@Column(length = 1024)
+	@Length(max = 1024)
 	private String				description;
 
 	@NotBlank
 	@URL
+	@Length(max = 255)
 	private String				web;
 
 	@NotBlank
 	@Email
+	@Length(max = 255)
 	private String				email;
 
 	@NotNull
@@ -57,7 +63,6 @@ public class Record extends DomainEntity {
 
 	//
 
-	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Sector				sector;

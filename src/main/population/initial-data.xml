@@ -87,24 +87,4 @@
 			<property name="language" value="es"/>
 	</bean>
 	
-	<!-- <bean id="Sector01" class = "acme.entities.sector.Sector">
-		<property name="sector" value="Technology"/>
-	</bean>
-	
-	<bean id="Sector02" class = "acme.entities.sector.Sector">
-		<property name="sector" value="Science"/>
-	</bean>
-	
-	<bean id="Sector03" class = "acme.entities.sector.Sector">
-		<property name="sector" value="Arts"/>
-	</bean>
-	
-	<bean id="Sector04" class = "acme.entities.sector.Sector">
-		<property name="sector" value="Business"/>
-	</bean>
-	
-	<bean id="Sector05" class = "acme.entities.sector.Sector">
-		<property name="sector" value="Health"/>
-	</bean> -->
-	
 </beans>

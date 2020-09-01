@@ -8,6 +8,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.entities.basicPost.BasicPost;
 import acme.framework.datatypes.Money;
 import lombok.Getter;
@@ -25,6 +27,7 @@ public class Debate extends BasicPost {
 
 	@NotBlank
 	@Column(length = 1024)
+	@Length(max = 1024)
 	private String				paragraph;
 
 	@NotNull
@@ -37,6 +40,7 @@ public class Debate extends BasicPost {
 
 	@NotBlank
 	@Email
+	@Length(max = 255)
 	private String				email;
 
 }

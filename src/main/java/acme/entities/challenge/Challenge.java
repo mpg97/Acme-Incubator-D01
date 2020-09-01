@@ -8,8 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
 
 import acme.entities.targets.AverageTarget;
 import acme.entities.targets.ExpertTarget;
@@ -27,6 +30,7 @@ public class Challenge extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 50)
+	@Length(max = 50)
 	private String				title;
 
 	@NotNull
@@ -35,14 +39,18 @@ public class Challenge extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 1024)
+	@Length(max = 1024)
 	private String				description;
 
+	@Valid
 	@OneToOne(optional = false)
 	private RookieTarget		rookie;
 
+	@Valid
 	@OneToOne(optional = false)
 	private AverageTarget		average;
 
+	@Valid
 	@OneToOne(optional = false)
 	private ExpertTarget		expert;
 

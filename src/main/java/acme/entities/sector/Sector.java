@@ -5,6 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +20,7 @@ public class Sector extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 50)
-	//	@Pattern(regexp = "^(Technology|Science|Arts|Business|Health)$")
+	@Length(max = 50)	//	@Pattern(regexp = "^(Technology|Science|Arts|Business|Health)$")
 	private String				sector;
 
 }

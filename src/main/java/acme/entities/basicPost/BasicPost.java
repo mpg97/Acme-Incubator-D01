@@ -9,6 +9,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+
+import org.hibernate.validator.constraints.Length;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -23,10 +26,12 @@ public class BasicPost extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 50)
+	@Length(max = 50)
 	private String				title;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@Past
 	private Date				creation;
 
 	@NotNull

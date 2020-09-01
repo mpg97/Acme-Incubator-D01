@@ -675,7 +675,7 @@ Sector
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-&lt; includes </panel_attributes>
+ includes &gt;</panel_attributes>
     <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>

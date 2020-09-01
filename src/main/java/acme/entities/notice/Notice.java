@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.basicPost.BasicPost;
@@ -23,6 +24,7 @@ public class Notice extends BasicPost {
 
 	@NotBlank
 	@URL
+	@Length(max = 255)
 	private String				header;
 
 	@NotBlank
@@ -30,6 +32,7 @@ public class Notice extends BasicPost {
 	private String				body;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 }

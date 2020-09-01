@@ -38,6 +38,11 @@ master.menu.anonymous.tool = Herramientas
 master.menu.anonymous.tool.byStars = Herramientas por estrellas
 master.menu.anonymous.tool.bySector = Herramientas por sector
 
+master.menu.anonymous.gonzalez-bulletin.create = Crear un boletín de González
+master.menu.anonymous.gonzalez-bulletin.list = Listar boletines de González
+master.menu.anonymous.paton-bulletin.create = Crear un boletín de Patón
+master.menu.anonymous.paton-bulletin.list = Listar boletines de Patón
+master.menu.bulletins = Boletines
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador

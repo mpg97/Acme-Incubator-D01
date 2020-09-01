@@ -32,6 +32,14 @@
 			<acme:menu-suboption code="master.menu.anonymous.tool.byStars" action="/anonymous/tool/list-by-stars" />
 
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.bulletins" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.gonzalez-bulletin.create" action="/anonymous/gonzalez-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.gonzalez-bulletin.list" action="/anonymous/gonzalez-bulletin/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.paton-bulletin.create" action="/anonymous/paton-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.paton-bulletin.list" action="/anonymous/paton-bulletin/list" />
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.notice" action="/administrator/notice/list" />	

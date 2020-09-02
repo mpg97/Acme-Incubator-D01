@@ -29,7 +29,8 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.favourite-link-paton = Enlace favorito Paton
+master.menu.anonymous.favourite-link-gonzalez = Enlace favorito Gonzalez
 master.menu.anonymous.notice.actives = Avisos activos
 master.menu.anonymous.technology = Tecnologías
 master.menu.anonymous.technology.byStars = Tecnologías por estrellas

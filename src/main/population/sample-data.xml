@@ -9,6 +9,42 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<bean id="gonzalezBulletin01" class="acme.entities.bulletins.GonzalezBulletin">
+
+		<property name="title" value="My first bulletin" />
+		<property name="author" value="王大伟" />
+		<property name="creationDate" value="2020/6/13 15:56" />
+		<property name="description" value="我喜欢的很贵电话" />
+
+	</bean>
+	
+		<bean id="gonzalezBulletin02" class="acme.entities.bulletins.GonzalezBulletin">
+
+		<property name="title" value="My second bulletin" />
+		<property name="author" value="王大伟" />
+		<property name="creationDate" value="2020/6/13 15:56" />
+		<property name="description" value="我喜欢的很贵电话" />
+
+	</bean>
+	
+		<bean id="patonBulletin01" class="acme.entities.bulletins.PatonBulletin">
+
+		<property name="title" value="My first bulletin" />
+		<property name="author" value="王大伟" />
+		<property name="creationDate" value="2020/6/13 15:56" />
+		<property name="description" value="我喜欢的很贵电话" />
+
+	</bean>
+	
+		<bean id="patonBulletin02" class="acme.entities.bulletins.PatonBulletin">
+
+		<property name="title" value="My second bulletin" />
+		<property name="author" value="马汀" />
+		<property name="creationDate" value="2020/6/13 15:56" />
+		<property name="description" value="我喜欢的很贵电话" />
+
+	</bean>
 
 	<bean id="notice01" class="acme.entities.notice.Notice">
 
@@ -167,7 +203,7 @@
 
 	<bean id="Money03" class="acme.framework.datatypes.Money">
 		<property name="amount" value="2100.0" />
-		<property name="currency" value="EUR" />
+		<property name="currency" value="€" />
 	</bean>
 
 	<bean id="technology01" class="acme.entities.technology.Technology">

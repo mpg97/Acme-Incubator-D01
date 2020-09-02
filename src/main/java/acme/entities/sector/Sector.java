@@ -20,7 +20,8 @@ public class Sector extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 50)
-	@Length(max = 50)	//	@Pattern(regexp = "^(Technology|Science|Arts|Business|Health)$")
+	@Length(max = 50)
+	//	@Pattern(regexp = "^(Technology|Science|Arts|Business|Health)$")
 	private String				sector;
 
 }

@@ -19,7 +19,8 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/" />
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-paton" action="https://www.twitch.tv/alexelcapo" />
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-gonzalez" action="https://www.twitch.tv/tonacho" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.notice.actives" action="/anonymous/notice/list-active" />
 			<acme:menu-separator/>
